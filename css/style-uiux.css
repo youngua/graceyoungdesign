@@ -112,13 +112,14 @@ a:hover {
 
 @media screen and (max-width: 1000px) {
   /* iPhone X */
+
   .header-container {
     position: sticky;
     padding: 12px;
   }
 
   .meofcourse {
-    font-size: 28px;
+    font-family: "Space Mono", monospace;
   }
 
   .header-container-content {
