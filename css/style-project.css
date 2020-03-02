@@ -205,6 +205,10 @@ img {
     /* outline: 1px solid #91929e; */
   }
 
+  .role {
+    padding-top: 5px;
+  }
+
   .content {
     width: 80%;
     margin: 0 auto;
@@ -246,6 +250,10 @@ img {
     padding: 12px;
     margin-bottom: 1px;
     outline: 1px solid #91929e;
+  }
+
+  .role {
+    padding-top: 5px;
   }
 
   .content {

@@ -83,6 +83,10 @@ a:hover {
     padding: 12px;
   }
 
+  .role {
+    padding-top: 5px;
+  }
+
   .border-bottom {
     border-bottom: 1px solid #91929e;
   }
@@ -129,6 +133,10 @@ a:hover {
   .header-container-content {
     width: 100%;
     padding: 12px 0 12px 0;
+  }
+
+  .role {
+    padding-top: 5px;
   }
 
   .paragraph-space-after {
