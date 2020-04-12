@@ -186,6 +186,31 @@ img {
   height: auto;
 }
 
+/* ---------------------- Scroll to Top  ---------------------- */
+
+#back2Top {
+  width: 40px;
+  overflow: hidden;
+  z-index: 999;
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 80px;
+  right: 2%;
+  padding: 4px;
+  text-align: center;
+  font-size : 30px;
+  text-decoration: none;
+  border: 1px #464654 solid;
+}
+
+#back2Top:hover::after {
+  /* background-color: #DDF; */
+  content: "☝️";
+  position: absolute;
+  right: 8.5px;
+}
+
 /* ---------------------- Body Container  ---------------------- */
 
 @media screen and (min-width: 1000px) {
@@ -197,6 +222,11 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+  }
+
+  .hero-img {
+    width: 100vw;
+    height: 100vh;
   }
 
   .body-container-content {
