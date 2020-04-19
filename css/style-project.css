@@ -26,7 +26,7 @@ ul {
   font-family: "Noto Sans", sans-serif;
   line-height: 1.4em;
   letter-spacing: 0.03rem;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 h1 {
@@ -38,7 +38,7 @@ h1 {
 h2 {
   font-family: "Space Mono", monospace;
   font-size: 1.7em;
-  font-weight: 400;
+  font-weight: 600;
   padding-top: 70px;
 }
 
@@ -50,7 +50,7 @@ h3 {
 }
 
 .highlight {
-  background-color: #fff2ac;
+  background-color: hsla(228, 100%, 63%, 0.25);
 }
 
 /* ---------------------- Links  ---------------------- */
@@ -98,6 +98,10 @@ a:hover {
     font-family: "Space Mono", monospace;
   }
 
+  .shuffle:hover {
+    border-bottom: 1px #4267ff solid;
+  }
+
   .paragraph-space-after {
     padding-bottom: 20px;
   }
@@ -129,6 +133,10 @@ a:hover {
     font-family: "Space Mono", monospace;
   }
 
+  .shuffle:hover {
+    border-bottom: 1px #4267ff solid;
+  }
+  
   .header-container-content {
     width: 100%;
     padding: 12px 0 12px 0;
@@ -249,6 +257,10 @@ img {
 
   .content p {
     padding-bottom: 50px;
+  }
+
+  .content li {
+    padding-bottom: 12px;
   }
 
   .content-wrap {

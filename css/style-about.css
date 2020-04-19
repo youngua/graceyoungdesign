@@ -23,7 +23,7 @@ ul {
   font-family: "Noto Sans", sans-serif;
   line-height: 1.4em;
   letter-spacing: 0.03rem;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 h1 {
@@ -45,7 +45,7 @@ h3 {
 }
 
 .highlight {
-  background-color: #fff2ac;
+  background-color: hsla(228, 100%, 63%, 0.25);
 }
 
 /* ---------------------- Links  ---------------------- */
@@ -97,6 +97,10 @@ a:hover {
     font-family: "Space Mono", monospace;
   }
 
+  .shuffle:hover {
+    border-bottom: 1px #4267ff solid;
+  }
+
   .paragraph-space-after {
     padding-bottom: 20px;
   }
@@ -130,6 +134,10 @@ a:hover {
   .meofcourse {
     font-size: 28px;
     font-family: "Space Mono", monospace;
+  }
+
+  .shuffle:hover {
+    border-bottom: 1px #4267ff solid;
   }
 
   .header-container-content {
