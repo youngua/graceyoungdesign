@@ -1,90 +1,133 @@
-<!-- 
-2020 Portfolio
-Designed & Coded by Grace Young
-Last Updated: April 11, 2020
--->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
- 
-  <link rel="stylesheet" type="text/css" href="css/style-about.css" />
-  
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="script/jquery.js" type="text/javascript"></script>
-  <script src="script/mobile.js" type="text/javascript"></script>
-  <link rel="shortcut icon" href="images/favicon.png" type="image/png"/>
-  
-  <title>Grace Young</title>
-  </head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+<link rel="stylesheet" type="text/css" href="css/style-about.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤡</text></svg>">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="script/index.js" type="text/javascript"></script>
+<script src="script/mobile.js" type="text/javascript"></script>
+
+<title>grace young</title>
+</head>
   <body>
-       
-    <div class="header-container border-bottom">
+      
+    <div class="header-container">
 
-      <div class="header-container-content">
-        <p><a class="shuffle meofcourse" href="index.html">grace young</a>
-          </p><p class="role">is a product designer</p>
+      <div class="nav-container">
+        <a class="link graceyoung" href="index.html">grace young</a>
+
+        <div class="nav">
+          <a class="link" href="graceyoung-resume.pdf" target="_blank">resume</a>
+          <a id="link" href="about.html">about</a>
+          <a class="link" href="index.html">work</a>
+        </div>
       </div>
 
-        <div class="header-container-content toggle">
-          <h3 class="paragraph-space-after">who takes on a playful and methodological approach to designing and living</h3>
-          
-          <!-- <p>I designed for <a class="links" href="https://neoscape.com/" target="_blank"> Neoscape</a>, <a class="links" href="https://www.stockwell.ai/" target="_blank">Stockwell</a>, <a class="links" href="https://www.impactlabs.io/" target="_blank">Impact Labs</a>, and <a class="links" href="http://fuziondesign.com/" target="_blank">Fuzion</a>.</p> -->
-        </div>
+    </div>
 
-      <nav class="header-container-content toggle">
-        <ul id="header-nav-li">
-          <li><a class="shuffle links" href="about.html">ABOUT</a></li>
-          <li><a class="shuffle" href="index.html">WORK</a></li>
+    <!-- the hamburger menu for mobile -->
+    <div class="mobile-nav" onclick="myFunction(this)">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
 
-        </ul>
-      </nav>
+    <!-- menu for mobile -->
+    <div class="toggle-menu" id="toggle-menu">
+      <a class="link graceyoung" href="index.html">grace young</a>
+
+      <div class="nav-mobile">
+        <li><a class="link" href="../../index.html#allwork">work</a></li>
+        <li><a id="link" href="../../about.html">about</a></li>
+        <li><a class="link" href="graceyoung-resume.pdf" target="_blank">resume</a></li>
       </div>
-
-      <div class="mobile-nav" onclick="myFunction(this)">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
+    </div>
 
     <div class="body-container">
       
-      <div class="body-container-content">
+      <div class="body-content">
           <img src = "images/about-img.jpg" />
           </div>
 
-      <div class="body-container-content">
-   
-          <p class="content">Grace is a wholesome senior at the <a class="links" href="https://www.risd.edu/" target="_blank"> Rhode Island School of Design,</a> from the Boston area. She studies graphic design and concentrates in <a class="links" href="https://ctc.risd.edu/" target="_blank">Computation, Technology, and Culture.</a></p> 
+      <div class="body-content">
+        <span class="title-connect">About</span>
+          <p>
+            I’m a product designer passionate about taking complex challenges and translating it into intuitive and exciting experiences.
+          </p> 
 
-          <p class="content">She does information design, brand identity, UI/UX, product design, web design, and coding. But, most importantly, she is always hungry to learn!</p>
+          <p>
+            I’m also an elusive sagittarius that enjoys cooking Chinese cuisine, watching historical & martial art Chinese dramas, learning about personal finance,  and engaging in long-winded conversations with strangers.
+          </p>
+          
+          <p>
+            <span class="title">Speciality</span>
+            ui/ux, product, visual, interaction, information design, brand identity, web design, font-end coding
+          </p>
 
-          <p class="content">She designed for <a class="links" href="https://neoscape.com/">Neoscape</a>, <a class="links" href="https://www.stockwell.ai/" target="_blank">Stockwell</a>, <a class="links" href="https://www.impactlabs.io/" target="_blank">Impact Labs</a>, and <a class="links" href="http://fuziondesign.com/" target="_blank">Fuzion</a>.</p>
+            <span class="title">Experience</span>
+            <p>
+            <a id="link" href="https://neoscape.com/" target="_blank">Neoscape</a>
+            / Interactive Design Intern / 2020
+            </p>
 
-          <p class="content">She is an elusive sagittarius that loves cooking chinese cuisine, <a href="https://www.soompi.com/article/1379259wpp/bask-in-the-joy-of-life-7-reasons-to-watch-c-drama-joy-of-life" target="_blank">watching historical & martial art chinese dramas</a>, <a href="https://www.amazon.com/Education-Value-Investor-Transformative-Enlightenment/dp/1137278811/ref=sr_1_4?keywords=the+value+investor&qid=1581826291&sr=8-4" target="_blank">reading life-lesson books</a>, and engaging in long-winded conversations with strangers.</p>
+            <p>
+            <a id="link" href="https://www.stockwell.ai/" target="_blank">Stockwell</a> / Product Design Intern / 2020
+            </p>
 
-          <p class="content">As a fun project, Grace designed and coded this website using HTML, CSS, and Javascript.</p>
+            <p>
+            <a id="link" href="https://www.impactlabs.io/" target="_blank">Impact Labs</a> / Designer / 2018-2020
+            </p>
+
+            <p>
+            <a id="link" href="http://fuziondesign.com/" target="_blank">Fuzion Design</a> / Design Intern / 2018
+            </p>
+
+          <p>
+            <span class="title">Education</span>
+            
+              Rhode Island School of Design
+              <br>BFA Graphic Design / 2016-2020</br>
+
+            <p>
+              Brown University
+              <br>CS / UI/UX course / 2019</br>
+              CS / Object-Oriented Programming in Java / 2019
+            </p>
+          </p>
+
         </div>
 
-        <div class="body-container-content">
+        <div class="body-content">
             
-            <p class="content">Want to collaborate or just say hello, reach her at <span class="highlight">gyoung@risd.edu</span></p>
-            
-            <p class="content">Download this <a class="links" href="graceyoung-resume.pdf" target="_blank">resume</a></p>
+        <span class="title-connect">Connect</span>
+        <p>Want to collaborate or just say hello, reach her at 
+        <a id="link" href="mailto:gyoung@risd.edu">gyoung@risd.edu</a></p>
        
-            <p class="content">Connect with her on <a class="links" class="content" href="https://www.linkedin.com/in/grace-young/" target="_blank">linkedin</a></p>
+        <p>
+          <a class="link" href="https://www.linkedin.com/in/grace-young/" target="_blank">Linkedin</a>
+          <br><a class="link" href="https://www.instagram.com/gyoung.design/" target="_blank">Instagram</a></br>
+        </p>
+    
+        <span class="title">Currently</span>
+        <p>Developing a website for a friend</p>
+        <p>Coloring for a collaborative project</p>
+        <p>Painting digitally with friends</p>
 
-            <p class="content"></p>
-
+        <span class="title">Meta</span>
+        <p>Typeset in B612</p>
+            
          </div>
         
     </div>
 
     <div class="footer">
-      <p>Coded with 🔥<br>by Grace!</br></p>
+      <p>&#x24B8; Developed by Grace Young 🔥</p>
     </div>
   </body>
 </html>

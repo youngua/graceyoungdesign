@@ -7,8 +7,8 @@
 
 body {
   background: #ECEBF0;
-  background: linear-gradient(#ECEBF0, #FFFBF5);
   max-height: 100%;
+  cursor: crosshair;
 }
 
 /* ---------- Typography ---------- */
@@ -19,9 +19,7 @@ h2,
 h3,
 p,
 a,
-.item-title,
-.title,
-.title-connect {
+.item-title {
   font-family: 'B612', sans-serif;
   color: #313131;
 }
@@ -39,7 +37,6 @@ h2 {
 p {
   font-size: 16px;
   line-height: 1.4em;
-  padding-bottom: 1.2em;
 }
 
 /* ---------- Links ---------- */
@@ -50,14 +47,12 @@ a:link {
 
 #link {
   border-bottom: 1px #FE4900 solid;
-  padding-bottom: 2px;
 }
 
 .link:hover {
   border-bottom: 1px #FE4900 solid;
   cursor: pointer;
   transform: translate(0px, -5px);
-  display: inline-block;
 
   -webkit-transition: all .25s ease;
   -moz-transition: all .25s ease;
@@ -84,7 +79,8 @@ a:link {
   display: inline-block;
 }
 
-.nav-container a {
+.nav-container a,
+.allworks a {
   float: left;
 }
 
@@ -99,36 +95,67 @@ a:link {
   display: none;
 }
 
-/* ---------- Image ---------- */
+.blurb {
+  font-size: 1.2em;
+  width: 100%;
+  height: 95%;
+}
+
+.allworks {
+  margin-top: 2px;
+}
+
+.allworks a {
+  margin-right: 4%;
+  padding-bottom: 2px;
+}
+
+/* ---------- Text + Image ---------- */
 
 img {
   width: 100%;
   height: auto;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-/* ---------- Body Container ---------- */
+.body-content img:hover {
+  /* opacity: 0.3; */
+  transform: translate(0px, -10px);
+
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+
+  -webkit-box-shadow: 0px 0px 12px 0px rgb(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 0px 12px 0px rgb(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 12px 0px rgb(0, 0, 0, 0.2);
+}
+
+.body-content img:nth-last-child(1) {
+  display: none;
+}
+
+.item-caption {
+  font-size: 12px;
+  line-height: 2em;
+  color: hsla(0, 0%, 19%, 0.5);
+}
 
 .body-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: start;
 }
 
 .body-content {
   width: 30%;
+  margin-bottom: 45px;
 }
 
-.title {
-  margin-top: 1em;
-}
-
-.title,
-.title-connect {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 2em;
-  display: block;
-}
+/* ---------- Footer ---------- */
 
 .footer p {
   font-size: 0.8em;
@@ -138,29 +165,6 @@ img {
 @media screen 
     and (max-width: 1024px)
     and (orientation: landscape) {
-
-  /* ---------- Typography ---------- */
-  p {
-    font-size: 12px;
-    line-height: 1.2em;
-    padding-bottom: 1em;
-  }
-
-  .title,
-  .title-connect {
-    font-size: 12px;
-    line-height: 1.8em;
-  }
-
-  .nav a, 
-  .footer p {
-    font-size: 0.7em;
-  }
-
-  /* ---------- Links ---------- */
-  #link {
-    padding-bottom: 0px;
-}
 
   /* ---------- Header ---------- */
   .header-container,
@@ -173,24 +177,28 @@ img {
   .graceyoung {
     font-size: 0.8em;
   }
+  
+  /* ---------- Body content ---------- */
+
+  .blurb {
+    font-size: 0.8em;
+  }
+
+  .item-title,
+  .nav a,
+  .allworks a,
+  .footer p {
+    font-size: 0.7em;
+  }
+
+  .item-caption {
+    font-size: 8px;
+  }
 }
 
 @media screen 
     and (max-width: 1024px)
     and (orientation: portrait) {
-  
-  /* ---------- Typography ---------- */
-  p {
-    font-size: 12px;
-    line-height: 1.2em;
-    padding-bottom: 1em;
-  }
-
-  .title,
-  .title-connect {
-    font-size: 12px;
-    line-height: 1.8em;
-  }
 
   /* ---------- Header ---------- */
   .header-container,
@@ -204,21 +212,25 @@ img {
     font-size: 1em;
   }
 
-  /* ---------- Footer ---------- */
-  .footer {
-    position: absolute;
-    bottom: 0;
+  /* ---------- Body content ---------- */
+
+  .blurb {
+    font-size: 0.8em;
+  }
+
+  .item-title,
+  .nav a,
+  .allworks a {
+    font-size: 0.7em;
+  }
+
+  .item-caption {
+    font-size: 8px;
   }
 }
 
+/* ---------- Small screens ---------- */
 @media screen and (max-width: 600px) {
-
-  /* ---------- Typography ---------- */
-  p {
-    font-size: 16px;
-    line-height: 1.2em;
-    padding-bottom: 1em;
-  }
 
   /* ---------- Header ---------- */
   .header-container,
@@ -227,7 +239,8 @@ img {
     margin: 4%;
   }
 
-  .header-container {
+  .header-container,
+  .blurb {
     padding-bottom: 4%;
   }
 
@@ -238,30 +251,19 @@ img {
   .nav a {
     display: none;
   }
-  /* ---------- Body container ---------- */
-  .body-container {
-    display: block;
+
+  .allworks a,
+  .item-title,
+  .blurb {
+    font-size: 14px;
+  }
+
+  .item-caption {
+    font-size: 10px;
   }
 
   .body-content {
     width: 100%;
-    margin-bottom: 4%;
-  }
-
-  .title,
-  .title-connect {
-  font-size: 16px;
-  line-height: 1.8em;
-}
-
-  /* ---------- Footer ---------- */
-  .footer {
-    position: relative;
-  }
-
-  .footer p {
-    margin-top: 12%;
-    font-size: 14px;
   }
 
   /* ---------- mobile navigation ---------- */
@@ -324,7 +326,4 @@ img {
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
   }
-
 }
-
-

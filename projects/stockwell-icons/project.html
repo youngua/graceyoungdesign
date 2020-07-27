@@ -1,89 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
- 
-  <link rel="stylesheet" type="text/css" href="../../css/style-project.css" />
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+   
+    <link rel="stylesheet" type="text/css" href="../../css/style-project.css" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../../script/scrollToTop.js" type="text/javascript"></script>
+    <script src="../../script/mobile.js" type="text/javascript"></script>
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="../../script/jquery.js" type="text/javascript"></script>
-  <script src="../../script/mobile.js" type="text/javascript"></script>
-  <link rel="shortcut icon" href="../../images/favicon.png" type="image/png"/>
-  
-  <title>Grace Young</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤡</text></svg>">
+    
+    <title>grace young</title>
   </head>
   <body>
        
-    <div class="header-container border-bottom">
+    <!-- header section -->
+    <div class="header-container">
+      <div class="nav-container">
+        <a class="link graceyoung" href="index.html">grace young</a>
 
-      <div class="header-container-content">
-        <p><a class="shuffle meofcourse" href="../../index.html">grace young</a>
-          </p><p class="role">is a product designer</p>
-      </div>
-
-        <div class="header-container-content toggle">
-          <h3 class="paragraph-space-after">who takes on a playful and methodological approach to designing and living</h3>
-
-          <!-- <p>I designed for <a class="links" href="https://neoscape.com/">Neoscape</a>, <a class="links" href="https://www.stockwell.ai/" target="_blank">Stockwell</a>, <a class="links" href="https://www.impactlabs.io/" target="_blank">Impact Labs</a>, and <a class="links" href="http://fuziondesign.com/" target="_blank">Fuzion</a>.</p> -->
+        <div class="nav">
+          <a class="link" href="graceyoung-resume.pdf" target="_blank">resume</a>
+          <a class="link" href="../../about.html">about</a>
+          <a id="link" href="../../index.html">work</a>
         </div>
-
-      <nav class="header-container-content toggle">
-        <ul id="header-nav-li">
-          <li><a class="shuffle" href="../../about.html">ABOUT</a></li>
-          <li><a class="shuffle links" href="../../index.html">WORK</a></li>
-
-        </ul>
-      </nav>
       </div>
+    </div>
 
-      <div class="mobile-nav" onclick="myFunction(this)">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        </div>
+    <!-- the hamburger menu for mobile -->
+    <div class="mobile-nav" onclick="myFunction(this)">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
 
+    <!-- menu for mobile -->
+    <div class="toggle-menu" id="toggle-menu">
+      <a class="link graceyoung" href="index.html">grace young</a>
+
+      <div class="nav-mobile">
+        <li><a id="link" href="../../index.html">work</a></li>
+        <li><a class="link" href="../../about.html">about</a></li>
+        <li><a class="link" href="graceyoung-resume.pdf" target="_blank">resume</a></li>
+      </div>
+    </div>
+
+    <!-- content section -->
     <div class="body-container">
       
-        <div class="body-container-content">
+        <div class="body-content">
             
           <div class="content">
-           <h1>Stockwell's Iconography</h1>
-           <p>During my 2019 summer internship, I modified and developed an extensive system around icons to better communicate ideas. The cherry overprints represent action while the outline part of the icons represented the object. The icons and it's overprints reflected stockwell's goal to make the user’s experience seamless and effortless.</p>
-           
-           <div class="content-wrap">
-           <p>Type: Visual Design</p>
-           <p>Date: Summer 2019</p>
-           <p>Role: Product Desigener</p>
-           <p>Tools: Illustrator</p>
-          </div>
+            <h1>Stockwell's Iconography</h1>
+            <p>During my 2019 summer internship, I modified and developed an extensive system around icons to better communicate ideas. The cherry overprints represent action while the outline part of the icons represented the object. The icons and it's overprints reflected stockwell's goal to make the user’s experience seamless and effortless.</p>
+
+            <div class="info">
+              <p>
+                <span class="info-title">Responsibilities</span> 
+                <br>Iconography</br>
+              </p>
+
+              <p>
+                <span class="info-title">Team</span>  
+                <br>Individual</br>
+              </p>
+
+              <p>
+                <span class="info-title">Duration</span> 
+                <br>Summer 2019</br>
+              </p>
+
+              <p>
+                <span class="info-title">Tools</span> 
+                <br>Illustrator</br>
+              </p>
+            </div>
+
           </div>
           
           <img src="stockwell-icons-img/1-800x500.png" />
             
           <div class="content">
-            <h2>Icon application: Stockwell's website</h2>
-            <p>After finishing the icons, I handed the icons to the design and engineering team which they applied to Stockwell’s website, marketing collaterals, and mobile app. 
-            </p>
+            <div class="section">
+              <h3>Icon application</h3>
+              <h2>Stockwell's website</h2>
+              <p>After finishing the icons, I handed the icons to the design and engineering team which they applied to Stockwell’s website, marketing collaterals, and mobile app. 
+              </p>
+            </div>
            </div>
 
            <img src="stockwell-icons-img/1-1440x3200-small.jpg" />
 
-           <div class="content">
-              <h2>Icon application: Table topper</h2>
+          <div class="content">
+            <div class="section">
+              <h3>Icon application</h3>
+              <h2>Table topper</h2>
               <p>The design team applied the icons to Stockwell's rebranded materials including table toppers for the Stockwell stores.</p>
-             </div>
+            </div>
+          </div>
 
              <img src="stockwell-icons-img/1-1440x960.jpg" />
 
-             <div class="content">
-                <h2>Icon application: Mobile app</h2>
+            <div class="content">
+              <div class="section">
+                <h3>Icon application</h3>
+                <h2>Mobile app</h2>
                 <p>The engineering team applied the icons into the Stockwell app pages.</p>
-               </div>
+              </div>
+            </div>
 
                <img src="stockwell-icons-img/1-1440x1300.jpg" />
+
+            <div class="content-last">
+            <div class="section-last">
+              <p>Check out more work here 
+                <span id="right-hand">👉🏻</span>
+                <span id="down-hand">👇🏻</span>
+              </p>
+              <div class="allworks">
+                <a  class="link" href="../../index.html">all</a>
+                <a  class="link" href="../../index-product.html">product</a>  
+                <a class="link" href="../../index-visual.html">visual</a> 
+              </div>
+            </div>
+          </div>
 
         </div>
     </div>
@@ -91,7 +135,7 @@
     <a id="back2Top" title="Back to top" href="#">☝🏼</a>
 
     <div class="footer">
-      <p>Coded with 🔥<br>by Grace!</br></p>
+      <p>&#x24B8; Developed by Grace Young 🔥</p>
     </div>
   </body>
 </html>

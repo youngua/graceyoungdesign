@@ -1,180 +1,499 @@
-/* ---------------------- Website layout  ---------------------- */
-
-body {
-  margin: 0;
-}
-
-p,
-ul {
-  margin: 0;
-}
-
-/* ---------------------- Typography  ---------------------- */
-
-@font-face {
-  font-family: "Space Mono", monospace;
-  src: url("https://fonts.googleapis.com/css?family=Space+Mono&display=swap");
-}
-
-@font-face {
-  font-family: "Noto Sans", sans-serif;
-  src: url("https://fonts.googleapis.com/css?family=Noto+Sans&display=swap");
-}
+/* ---------- Global Metrics ---------- */
 
 * {
-  color: #464654;
-  font-family: "Noto Sans", sans-serif;
-  line-height: 1.4em;
-  letter-spacing: 0.03rem;
-  font-size: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: #fff;
+  max-height: 100%;
+  cursor: crosshair;
+}
+
+/* ---------- Typography ---------- */
+@import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&display=swap');
+
+h1,
+h2,
+h3,
+p,
+a,
+.item-title,
+.content li  {
+  font-family: 'B612', sans-serif;
+  color: #313131;
 }
 
 h1 {
-  font-family: "Space Mono", monospace;
   font-size: 2.5em;
-  font-weight: 400;
+  padding-bottom: 1em;
+  font-weight: 700;
 }
 
 h2 {
-  font-family: "Space Mono", monospace;
   font-size: 1.7em;
-  font-weight: 600;
-  padding-top: 70px;
+  line-height: 1.2em;
+  padding-bottom: 0.8em;
+  font-weight: 700;
 }
 
 h3 {
-  margin: 0;
-  font-size: 16;
-  font-weight: 400;
-  font-family: "Noto Sans", sans-serif;
+  font-size: 1em;
+  line-height: 1.2em;
+  padding-bottom: 0.2em;
+  font-weight: 700;
+  color: #909090;
+}
+
+p,
+.content li  {
+  font-size: 16px;
+  line-height: 1.3em;
 }
 
 .highlight {
-  background-color: hsla(228, 100%, 63%, 0.25);
+  /* background-color: hsla(228, 100%, 63%, 0.25); blue */
+  background-color: hsla(161, 96%, 28%, 0.3);
 }
 
-/* ---------------------- Links  ---------------------- */
-
+/* ---------- Links ---------- */
 a:link {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
-a {
-  color: #464654;
+#link {
+  border-bottom: 1px #FE4900 solid;
 }
 
-a:hover {
-  color: #4267ff;
+.link:hover {
+  border-bottom: 1px #FE4900 solid;
+  cursor: pointer;
+  transform: translate(0px, -5px);
+  display: inline-block;
+
+  -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
 }
 
-.links {
-  color: #4267ff;
+/* ---------- Headings ---------- */
+
+.header-container,
+.body-container,
+.footer {
+  margin: 2% 100px 2% 100px;
+  display: flow-root;
 }
 
-/* ---------------------- Headings  ---------------------- */
+.header-container {
+  margin-bottom: 4%;
+}
 
-@media screen and (min-width: 1000px) {
-  /* Large screens */
-  .header-container {
-    max-width: 100%;
-    padding: 25px 100px 25px 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    /* background-color: #f5f5f5; */
+.graceyoung {
+  font-size: 1.3em;
+  display: inline-block;
+}
+
+.nav-container a,
+.allworks a {
+  float: left;
+}
+
+.nav a {
+  font-size: 16px;
+  margin-left: 2%;
+  float: right;
+  padding-bottom: 2px;
+}
+
+.toggle-menu {
+  display: none;
+}
+
+/* ---------- Image ---------- */
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* ---------- Body Container ---------- */
+
+.hero-img {
+  width: 100%;
+  margin-bottom: 4%;
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  max-height: 82vh;
+  object-fit: cover;
+}
+
+.body-content {
+  display: block;
+  margin: 0 auto;
+  width: 70vw;
+  /* outline: 1px solid #91929e; */
+}
+
+.content,
+.content-last {
+  width: 40vw;
+  margin: 0 auto;
+  z-index: 2;
+  /* outline: 1px solid #91929e; */
+}
+
+.content p {
+  padding-bottom: 4%;
+}
+
+.content li {
+  padding-bottom: 12px;
+}
+
+.info {
+  border-left: 1px solid #000000;
+  padding-left: 2%;
+  padding-top: 2%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.info p {
+  padding-bottom: 2%;
+}
+
+.info-title {
+  font-weight: 700;
+}
+
+.section,
+.section-last {
+  padding-top: 8%;
+}
+
+/* ---------- Bottom Navigation ---------- */
+
+.content-last p {
+  padding-bottom: 0;
+}
+
+.section-last {
+  padding-bottom: 8%;
+  display: flex;
+  justify-content: center;
+}
+
+.section-last p {
+  color: #FE4900;
+}
+
+.section-last .allworks a {
+  float: left;
+}
+
+.section-last .allworks {
+  display: flex;
+  justify-content: center;
+  margin-left: 5%;
+}
+
+.section-last .allworks a {
+  margin-right: 12%;
+  padding-bottom: 2px;
+}
+
+#down-hand {
+  display: none;
+}
+
+/* ---------- Footer ---------- */
+
+.footer p {
+  font-size: 0.8em;
+  padding-bottom: 0;
+}
+
+/* ---------- Scroll to Top ---------- */
+
+#back2Top {
+  width: 40px;
+  overflow: hidden;
+  z-index: 999;
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  padding: 2px;
+  text-align: center;
+  font-size : 30px;
+  text-decoration: none;
+  border: 1px #91929e solid;
+}
+
+#back2Top:hover::after {
+  /* background-color: #DDF; */
+  content: "☝️";
+  position: absolute;
+  right: 7px;
+}
+
+@media screen 
+    and (max-width: 1024px)
+    and (orientation: landscape) {
+  
+  /* ---------- Typography ---------- */
+  h1 {
+    font-size: 2em;
+    padding-bottom: 0.5em;
   }
 
-  .header-container-content {
-    width: 30%;
-    padding: 12px;
+  h2 {
+    font-size: 1.5em;
+    line-height: 1.2em;
+    padding-bottom: 0.5em;
   }
 
-  .border-bottom {
-    border-bottom: 1px solid #91929e;
+  h3 {
+    font-size: 0.8em;
+    line-height: 0.8em;
+    padding-bottom: 0.5em;
   }
 
-  .meofcourse {
-    font-size: 28px;
-    font-family: "Space Mono", monospace;
+  p,
+  .content li,
+  .allworks a  {
+    font-size: 14px;
   }
 
-  .shuffle:hover {
-    border-bottom: 1px #4267ff solid;
+  /* ---------- Header ---------- */
+  .header-container,
+  .body-container,
+  .footer {
+    margin-right: 60px;
+    margin-left: 60px;
   }
 
-  .paragraph-space-after {
-    padding-bottom: 20px;
+  .graceyoung {
+    font-size: 0.8em;
   }
 
-  #header-nav-li {
-    list-style-type: none;
-    text-transform: uppercase;
-    text-align: right;
-    margin: 0;
-    padding: 0;
+  .nav a,
+  .footer p {
+    font-size: 0.7em;
   }
 
-  #header-nav-li li {
-    float: right;
-    padding-left: 20px;
+  /* ---------- Body Navigation ---------- */
+  .body-content {
+    width: 80vw;
+  }
+
+  .content,
+  .content-last {
+    width: 60vw;
+  }
+
+  /* ---------- Bottom Navigation ---------- */
+
+  .allworks {
+    margin-left: 7%;
   }
 }
 
-@media screen and (max-width: 1000px) {
-  /* iPhone X */
-  .header-container {
-    position: sticky;
-    padding: 24px;
-    /* background-color: #f5f5f5; */
+@media screen 
+    and (max-width: 1024px)
+    and (orientation: portrait) {
+
+  /* ---------- Header ---------- */
+  .header-container,
+  .body-container,
+  .footer {
+    margin-right: 60px;
+    margin-left: 60px;
   }
 
-  .meofcourse {
-    font-size: 28px;
-    font-family: "Space Mono", monospace;
+  .graceyoung {
+    font-size: 1em;
   }
 
-  .shuffle:hover {
-    border-bottom: 1px #4267ff solid;
+  /* ---------- Body Container ---------- */
+
+   .body-content {
+    width: 75vw;
   }
   
-  .header-container-content {
+  .content {
+    width: 60vw;
+  }
+
+  /* ---------- Bottom Navigation ---------- */
+
+  .allworks {
+    margin-left: 6%;
+  }
+}
+
+/* ---------- Small screens ---------- */
+
+@media screen and (max-width: 600px) {
+  
+  /* ---------- Typography ---------- */
+  h1 {
+    font-size: 2.5em;
+    line-height: 1em;
+    padding-bottom: 0.5em;
+  }
+  
+  h2 {
+    font-size: 1.7em;
+    line-height: 1em;
+    padding-bottom: 0.8em;
+  }
+
+  h3 {
+    font-size: 14px;
+    line-height: 1.8em;;
+  }
+
+  p,
+  .content li,
+  .footer p,
+  .allworks a  {
+    font-size: 16px;
+  }
+
+  /* ---------- Header ---------- */
+  .header-container,
+  .body-container,
+  .footer {
+    margin: 4%;
+  }
+
+  .header-container {
+    padding-bottom: 4%;
+  }
+
+  .graceyoung {
+    font-size: 1.2em;
+  }
+
+  .nav a {
+    display: none;
+  }
+
+  /* ---------- Body Container ---------- */
+  .body-container {
+    margin-bottom: 12%;
+  }
+
+  .body-content {
     width: 100%;
-    padding: 12px 0 12px 0;
+  }
+  
+  .content {
+    width: 100%;
   }
 
-  .paragraph-space-after {
-    padding-bottom: 20px;
+  .content p {
+    padding-bottom: 6%;
   }
 
-  #header-nav-li {
-    list-style-type: none;
+  .content li {
+    margin-left: 10%;
+  }
+
+  .info {
+    width: 70%;
+  }
+
+  .info p {
+    margin-bottom: 4%;
+  }
+
+  /* ---------- Bottom Navigation ---------- */
+  .content-last {
+    width: 100%;
     margin: 0;
-    padding: 0;
   }
 
-  /* mobile navigation */
+  .section-last {
+    display: block;
+  }
 
+  .section-last p {
+    padding-bottom: 2%;
+  }
+
+  #right-hand {
+    display: none;
+  }
+
+  #down-hand {
+    display: inline-block;
+  }
+
+  .section-last .allworks {
+    display: block;
+    margin-left: 0;
+  }
+
+  .section-last .allworks a {
+    margin-right: 6%;
+  }
+
+  /* ---------- mobile navigation ---------- */
+  .toggle-menu {
+    padding-top: 4%;
+    padding-left: 4%;
+    display: none;
+    background: #ECEBF0;
+    background: linear-gradient(#BBC5EB, #A09487);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .toggle-menu li {
+    list-style-type: none;
+    display: flex;
+    font-size: 2em;
+    padding-bottom: 0.5em;
+  }
+
+  .nav-mobile {
+    padding-top: 24%;
+  }
+
+  /* The 3 Hamburger Menu */
   .mobile-nav {
     display: inline-block;
     cursor: pointer;
     position: absolute;
-    top: 3%;
-    right: 5%;
+    top: 2%;
+    right: 4%;
+    z-index: 2;
   }
 
   .line1,
   .line2,
   .line3 {
-    width: 35px;
-    height: 2px;
-    background-color: #464654;
-    margin: 8px 0;
+    width: 24px;
+    height: 1.5px;
+    background-color: #313131;
+    margin: 6px 0;
     transition: 0.4s;
   }
 
   .change .line1 {
-    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
-    transform: rotate(-45deg) translate(-6px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-3px, 3px);
+    transform: rotate(-45deg) translate(-2.8px, 2.8px);
   }
 
   .change .line2 {
@@ -187,136 +506,3 @@ a:hover {
   }
 }
 
-/* ---------------------- Image  ---------------------- */
-
-img {
-  width: 100%;
-  height: auto;
-}
-
-/* ---------------------- Scroll to Top  ---------------------- */
-
-#back2Top {
-  width: 40px;
-  overflow: hidden;
-  z-index: 999;
-  display: none;
-  cursor: pointer;
-  position: fixed;
-  bottom: 80px;
-  right: 2%;
-  padding: 4px;
-  text-align: center;
-  font-size : 30px;
-  text-decoration: none;
-  border: 1px #464654 solid;
-}
-
-#back2Top:hover::after {
-  /* background-color: #DDF; */
-  content: "☝️";
-  position: absolute;
-  right: 8.5px;
-}
-
-/* ---------------------- Body Container  ---------------------- */
-
-@media screen and (min-width: 1000px) {
-  /* Large screens */
-
-  .body-container {
-    max-width: 100%;
-    padding: 50px 100px 25px 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .hero-img {
-    width: 100vw;
-    height: 100vh;
-  }
-
-  .body-container-content {
-    display: block;
-    margin: 0 auto;
-    width: 70%;
-    margin-bottom: 45px;
-    /* outline: 1px solid #91929e; */
-  }
-
-  .role {
-    padding-top: 5px;
-  }
-
-  .content {
-    width: 80%;
-    margin: 0 auto;
-    /* outline: 1px solid #91929e; */
-  }
-
-  .content p {
-    padding-bottom: 50px;
-  }
-
-  .content li {
-    padding-bottom: 12px;
-  }
-
-  .content-wrap {
-    border-left: 1px solid #000000;
-    height: 100%;
-    padding-top: 5px;
-    padding-left: 15px;
-    margin-bottom: 50px;
-  }
-
-  .content-wrap p {
-    padding-bottom: 10px;
-  }
-
-  .footer {
-    padding: 0px 100px 50px 100px;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  /* iPhone X */
-
-  .body-container {
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .body-container-content {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 1px;
-    outline: 1px solid #91929e;
-  }
-
-  .role {
-    padding-top: 5px;
-  }
-
-  .content {
-    padding: 22px 12px;
-  }
-
-  .content-wrap {
-    border-left: 1px solid #000000;
-    height: 100%;
-    padding-left: 15px;
-    margin-top: 24px;
-  }
-
-  .item-container-divider-top {
-    margin: 0;
-    opacity: 0;
-  }
-
-  .footer {
-    padding: 12px;
-  }
-}
