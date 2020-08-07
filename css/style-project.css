@@ -49,12 +49,12 @@ h3 {
 p,
 .content li  {
   font-size: 16px;
-  line-height: 1.3em;
+  line-height: 1.5em;
 }
 
 .highlight {
   /* background-color: hsla(228, 100%, 63%, 0.25); blue */
-  background-color: hsla(161, 96%, 28%, 0.3);
+  background-color: hsla(17, 100%, 50%, 0.2);
 }
 
 /* ---------- Links ---------- */
@@ -155,8 +155,13 @@ img {
   padding-bottom: 4%;
 }
 
+.content ul {
+  margin-bottom: 4%;
+}
+
 .content li {
-  padding-bottom: 12px;
+  padding-bottom: 3%;
+  margin-left: 10%;
 }
 
 .info {
