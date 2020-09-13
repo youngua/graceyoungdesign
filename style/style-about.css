@@ -133,7 +133,7 @@ img {
   position: absolute;
   bottom: 12px;
   font-size: 0.8em;
-  padding-bottom: 0;
+  padding-bottom: 15px;
 }
 
 @media screen 
