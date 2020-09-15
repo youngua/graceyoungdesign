@@ -133,7 +133,6 @@ img {
   position: absolute;
   bottom: 12px;
   font-size: 0.8em;
-  padding-bottom: 15px;
 }
 
 @media screen 
@@ -262,6 +261,8 @@ img {
 
   .footer p {
     margin-top: 12%;
+    position: relative;
+    bottom: 0;
   }
 
   /* ---------- mobile navigation ---------- */
