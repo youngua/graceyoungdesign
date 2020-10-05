@@ -7,37 +7,32 @@
 
 body {
   background: #fff;
-  cursor: crosshair;
 }
 
 /* ---------- Typography ---------- */
-@import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&display=swap');
+@font-face {
+  font-family: 'B612';
+  src: url('../fonts/B612-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
-h1,
-h2,
-h3,
+@font-face {
+  font-family: 'B612';
+  src: url('../fonts/B612-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: bold;
+}
+
 p,
-a,
-.item-title,
-.title,
-.title-connect {
-  font-family: 'B612', sans-serif;
+a {
+  font-family: 'B612';
   color: #313131;
 }
 
-h1 {
-  font-size: 2.5em;
-  font-weight: 400;
-}
-
-h2 {
-  font-size: 1.7em;
-  font-weight: 400;
-}
-
 p {
-  font-size: 16px;
-  line-height: 1.4em;
+  font-size: 22px;
+  line-height: 30px;
   padding-bottom: 1.2em;
 }
 
@@ -48,21 +43,11 @@ a:link {
 }
 
 #link {
-  border-bottom: 1px #FE4900 solid;
-  padding-bottom: 2px;
+  color: #FE4900;
 }
 
 .link:hover {
-  border-bottom: 1px #FE4900 solid;
-  cursor: pointer;
-  transform: translate(0px, -5px);
-  display: inline-block;
-
-  -webkit-transition: all .25s ease;
-  -moz-transition: all .25s ease;
-  -ms-transition: all .25s ease;
-  -o-transition: all .25s ease;
-  transition: all .25s ease;
+  color: #FE4900;
 }
 
 /* ---------- Headings ---------- */
@@ -111,28 +96,19 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  min-height: 75vh;
 }
 
 .body-content {
   width: 30%;
 }
 
-.title {
-  margin-top: 1em;
-}
-
-.title,
-.title-connect {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 2em;
-  display: block;
+.body-content-text {
+  width: 65%;
 }
 
 .footer p {
-  position: absolute;
-  bottom: 12px;
-  font-size: 0.8em;
+  font-size: 12px;
 }
 
 @media screen 
@@ -141,15 +117,9 @@ img {
 
   /* ---------- Typography ---------- */
   p {
-    font-size: 12px;
+    font-size: 18px;
     line-height: 1.2em;
     padding-bottom: 1em;
-  }
-
-  .title,
-  .title-connect {
-    font-size: 12px;
-    line-height: 1.8em;
   }
 
   .nav a, 
@@ -160,7 +130,7 @@ img {
   /* ---------- Links ---------- */
   #link {
     padding-bottom: 0px;
-}
+  }
 
   /* ---------- Header ---------- */
   .header-container,
@@ -179,19 +149,6 @@ img {
     and (max-width: 1024px)
     and (orientation: portrait) {
   
-  /* ---------- Typography ---------- */
-  p {
-    font-size: 12px;
-    line-height: 1.2em;
-    padding-bottom: 1em;
-  }
-
-  .title,
-  .title-connect {
-    font-size: 12px;
-    line-height: 1.8em;
-  }
-
   /* ---------- Header ---------- */
   .header-container,
   .body-container,
@@ -204,10 +161,9 @@ img {
     font-size: 1em;
   }
 
-  /* ---------- Footer ---------- */
-  .footer {
-    position: absolute;
-    bottom: 0;
+  /* ---------- Body Container ---------- */
+  .body-container {
+    min-height: 86vh;
   }
 }
 
@@ -215,9 +171,8 @@ img {
 
   /* ---------- Typography ---------- */
   p {
-    font-size: 16px;
-    line-height: 1.2em;
-    padding-bottom: 1em;
+    font-size: 20px;
+    line-height: 1.3em;
   }
 
   /* ---------- Header ---------- */
@@ -238,6 +193,13 @@ img {
   .nav a {
     display: none;
   }
+
+  /* ---------- Image ---------- */
+  img {
+    height: 320px;
+    object-fit: cover;
+  }
+  
   /* ---------- Body container ---------- */
   .body-container {
     display: block;
@@ -248,21 +210,15 @@ img {
     margin-bottom: 4%;
   }
 
-  .title,
-  .title-connect {
-  font-size: 16px;
-  line-height: 1.8em;
-}
+  .body-content-text {
+    width: 100%;
+  }
 
   /* ---------- Footer ---------- */
-  .footer {
-    position: relative;
-  }
 
   .footer p {
     margin-top: 12%;
-    position: relative;
-    bottom: 0;
+    font-size: 14px;
   }
 
   /* ---------- mobile navigation ---------- */
