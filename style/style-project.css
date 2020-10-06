@@ -184,6 +184,13 @@ img {
   padding-top: 8%;
 }
 
+.half-layout img {
+  width: 49.5%;
+  height: 100%;
+  height: intrinsic;
+  height: -webkit-intrinsic;
+}
+
 /* ---------- Bottom Navigation ---------- */
 
 .content-last p {
@@ -420,6 +427,11 @@ img {
 
   .info p {
     margin-bottom: 4%;
+  }
+
+  .half-layout img {
+    width: 100%;
+    padding-left: 0;
   }
 
   /* ---------- Bottom Navigation ---------- */

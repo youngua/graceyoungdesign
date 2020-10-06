@@ -111,6 +111,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  min-height: 800px;
 }
 
 .body-content {
@@ -130,8 +131,6 @@ img {
 }
 
 .footer p {
-  position: absolute;
-  bottom: 12px;
   font-size: 0.8em;
 }
 
