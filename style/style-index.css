@@ -7,35 +7,37 @@
 
 body {
   background: #fff;
-  cursor: crosshair;
 }
 
 /* ---------- Typography ---------- */
-@import url('https://fonts.googleapis.com/css2?family=B612:wght@400;700&display=swap');
+@font-face {
+  font-family: 'B612';
+  src: url('../fonts/B612-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
 
-h1,
-h2,
-h3,
+@font-face {
+  font-family: 'B612';
+  src: url('../fonts/B612-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: bold;
+}
+
 p,
 a,
 .item-title {
-  font-family: 'B612', sans-serif;
+  font-family: 'B612';
   color: #313131;
-}
-
-h1 {
-  font-size: 2.5em;
-  font-weight: 400;
-}
-
-h2 {
-  font-size: 1.7em;
-  font-weight: 400;
 }
 
 p {
   font-size: 16px;
   line-height: 1.4em;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 /* ---------- Links ---------- */
@@ -45,19 +47,11 @@ a:link {
 }
 
 #link {
-  border-bottom: 1px #FE4900 solid;
+  color: #FE4900;
 }
 
 .link:hover {
-  border-bottom: 1px #FE4900 solid;
-  cursor: pointer;
-  transform: translate(0px, -5px);
-
-  -webkit-transition: all .25s ease;
-  -moz-transition: all .25s ease;
-  -ms-transition: all .25s ease;
-  -o-transition: all .25s ease;
-  transition: all .25s ease;
+  color: #FE4900;
 }
 
 /* ---------- Headings ---------- */
@@ -95,7 +89,7 @@ a:link {
 }
 
 .blurb {
-  font-size: 1.2em;
+  font-size: 30px;
   width: 100%;
   height: 95%;
 }
@@ -118,7 +112,6 @@ img {
 }
 
 .body-content img:hover {
-  /* opacity: 0.3; */
   transform: translate(0px, -10px);
 
   -webkit-transition: all .25s ease;
@@ -143,15 +136,55 @@ img {
 }
 
 .body-container {
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-content: start;
+  padding-top: 10%;
 }
 
 .body-content {
   width: 30%;
-  margin-bottom: 45px;
+  margin-bottom: 5%;
+  z-index: 1;
+}
+
+.category,
+.category-w {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 200px;
+  font-weight: bold;
+  color: hsla(0, 0%, 19%, 0.08);
+}
+
+.category-w {
+  color: hsla(0, 0%, 100%, 0.25);
+}
+
+.container-bg {
+  height: auto;
+  width: 100vw;
+  background-color: #252E3B;
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
+
+.container-bg .item-caption {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.container-bg .item-title,
+.footer p {
+  color: #fff;
 }
 
 /* ---------- Footer ---------- */
@@ -180,9 +213,9 @@ img {
   /* ---------- Body content ---------- */
 
   .blurb {
-    font-size: 0.8em;
+    font-size: 27px;
   }
-
+  
   .item-title,
   .nav a,
   .allworks a,
@@ -192,6 +225,11 @@ img {
 
   .item-caption {
     font-size: 8px;
+  }
+
+  .category,
+  .category-w {
+    font-size: 130px;
   }
 }
 
@@ -214,17 +252,22 @@ img {
   /* ---------- Body content ---------- */
 
   .blurb {
-    font-size: 0.8em;
+    font-size: 18px;
   }
 
   .item-title,
   .nav a,
   .allworks a {
-    font-size: 0.7em;
+    font-size: 0.8em;
   }
 
   .item-caption {
     font-size: 8px;
+  }
+
+  .category,
+  .category-w {
+    font-size: 110px;
   }
 }
 
@@ -251,6 +294,8 @@ img {
     display: none;
   }
 
+  /* ---------- Body content ---------- */
+
   .allworks a,
   .item-title,
   .blurb {
@@ -261,8 +306,29 @@ img {
     font-size: 12px;
   }
 
+  .body-container {
+    padding-top: 14%;
+  }
+
   .body-content {
     width: 100%;
+    margin-bottom: 10%;
+  }
+
+  .first {
+    display: none;
+  }
+
+  .category,
+  .category-w {
+    font-size: 75px;
+    overflow: hidden;
+    margin: -4%;
+  }
+
+  /* ---------- footer ---------- */
+  .footer p {
+    font-size: 14px;
   }
 
   /* ---------- mobile navigation ---------- */
@@ -270,14 +336,14 @@ img {
     padding-top: 4%;
     padding-left: 4%;
     display: none;
-    background: #ECEBF0;
+    /* background: #ECEBF0; */
     background: linear-gradient(#BBC5EB, #A09487);
     height: 100%;
     width: 100%;
     position: fixed;
     top: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 2;
     transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
@@ -299,7 +365,7 @@ img {
     position: absolute;
     top: 2%;
     right: 4%;
-    z-index: 2;
+    z-index: 3;
   }
 
   .line1,
