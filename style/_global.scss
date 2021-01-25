@@ -1,0 +1,139 @@
+/* ---------- Variables ---------- */
+$font-family: "B612", san-serif;
+
+$copy-color: #525252;
+$link-color: #808dd0;
+
+%flex {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0;
+}
+
+$m-media: 900px;
+
+/* ---------- Global ---------- */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $font-family;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../projects/img/background-texture.jpg");
+  // background: #f4f4f4;
+  color: $copy-color;
+  margin: 40px;
+
+  @media (max-width: $m-media) {
+    margin: 16px;
+  }
+}
+
+p {
+  font-size: 18px;
+  line-height: 28px;
+  padding-bottom: 28px;
+
+  @media (max-width: $m-media) {
+    line-height: 24px;
+    padding-bottom: 24px;
+  }
+}
+
+hr {
+  border: 2px solid #F7BC2B;
+  text-decoration-style: wavy;
+}
+/* ---------- Links---------- */
+
+a {
+  text-decoration: none;
+  color: $link-color;
+}
+
+a:hover {
+  color: #e86037;
+}
+
+.nav-link {
+  color: $copy-color;
+}
+
+/* ---------- Typography ---------- */
+@font-face {
+  font-family: "B612";
+  src: url("../fonts/B612-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "B612";
+  src: url("../fonts/B612-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: bold;
+}
+
+.bold {
+  font-weight: 700;
+  font-style: bold;
+}
+
+h1 {
+  font-size: 48px;
+  padding-top: 100px;
+
+  @media (max-width: $m-media) {
+    font-size: 40px;
+  }
+}
+
+/* ---------- Components ---------- */
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 40px;
+  @extend %flex;
+
+  #clown {
+    @media (min-width: $m-media) {
+      font-size: 22px;
+    }
+  }
+
+  .nav-content p {
+    float: left;
+    padding-left: 40px;
+  }
+
+  p {
+    padding-bottom: 0;
+  }
+
+  @media (max-width: $m-media) {
+    padding: 16px;
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+.footer {
+  padding-top: 100px;
+
+  p {
+    padding-bottom: 0;
+  }
+  @extend %flex;
+}

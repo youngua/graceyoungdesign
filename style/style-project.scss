@@ -1,0 +1,109 @@
+/* ---------- Imports ---------- */
+@import "global";
+
+/* ---------- Variables ---------- */
+$m-media: 900px;
+
+%flex {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+
+%img-desktop {
+  img {
+    width: 49.5%;
+    height: 100%;
+  }
+}
+
+%img-mobile {
+  @media (max-width: $m-media) {
+    display: block;
+    padding-bottom: 0;
+
+    img {
+      width: 100%;
+      padding-bottom: 12px;
+    }
+  }
+}
+
+/* ---------- Project ---------- */
+p {
+  @media (max-width: $m-media) {
+    font-size: 16px;
+  }
+}
+
+.project-content {
+  @extend %flex;
+  padding-top: 30px;
+  padding-bottom: 100px;
+
+  .content:nth-child(1) {
+    width: 50%;
+  }
+
+  @media (max-width: $m-media) {
+    display: block;
+    padding-bottom: 50px;
+
+    .content:nth-child(1) {
+      width: 100%;
+    }
+  }
+}
+
+.rect {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 12px;
+}
+
+.two-rects {
+  @extend %flex;
+  @extend %img-desktop;
+  @extend %img-mobile;
+}
+
+.two-sq {
+  @extend %flex;
+  @extend %img-desktop;
+  @extend %img-mobile;
+}
+
+video {
+  width: 49.5%;
+  height: 100%;
+
+  @media (max-width: $m-media) {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 12px;
+  }
+}
+
+/* ---------- Next Project ---------- */
+
+.next-project {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+
+  #right-hand {
+    padding-left: 12px;
+  }
+
+  @media (max-width: $m-media) {
+    display: block;
+
+    p {
+      padding-bottom: 8px;
+    }
+
+    #right-hand {
+      padding-left: 0;
+    }
+  }
+}
