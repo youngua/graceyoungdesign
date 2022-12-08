@@ -20,7 +20,6 @@
 }
 
 body {
-  background-image: url("../projects/img/background-texture.jpg");
   color: #525252;
   margin: 40px;
 }
@@ -79,14 +78,17 @@ a:hover {
   font-style: bold;
 }
 
-.bold {
-  font-weight: 700;
-  font-style: bold;
+@font-face {
+  font-family: "Blanco";
+  src: url("../fonts/Blanco-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
 }
 
 h1 {
   font-size: 48px;
   padding-top: 100px;
+  font-weight: 400;
 }
 
 @media (max-width: 900px) {
@@ -175,6 +177,10 @@ h1 {
 .project-content {
   padding-top: 30px;
   padding-bottom: 100px;
+}
+
+.project-content .content p {
+  font-family: "Blanco", serif;
 }
 
 .project-content .content:nth-child(1) {

@@ -41,6 +41,10 @@ p {
   padding-top: 30px;
   padding-bottom: 100px;
 
+  .content p {
+    font-family: "Blanco", serif;
+  }
+
   .content:nth-child(1) {
     width: 50%;
   }

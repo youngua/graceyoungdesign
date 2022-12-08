@@ -4,19 +4,24 @@
 /* ---------- Variables ---------- */
 $m-media: 900px;
 
+body {
+  background-image: url("../projects/img/background-image.jpg");
+  background-repeat: no-repeat;
+}
+
 /* ---------- Header ---------- */
 
 .about {
   position: relative;
-  padding-top: 100px;
+  padding-top: 150px;
+  padding-bottom: 100px;
   width: 65%;
 
   p {
-    // font-size: 28px;
     font-size: 2.5vh;
     line-height: 4.5vh;
-    // line-height: 45px;
-    padding-bottom: 45px;
+    padding-bottom: 24px;
+    font-family: "Blanco", serifs;
   }
 
   p:last-child {
@@ -95,12 +100,22 @@ hr {
   padding-bottom: 36px;
   text-transform: uppercase;
   font-weight: bold;
-  // color: #F7BC2B;
+
+  display: flex;
+  flex-direction: row;
 
   @media (max-width: $m-media) {
     padding-top: 16px;
     padding-bottom: 50px;
   }
+}
+
+.category:after {
+  content: "";
+  flex: 1 1;
+  border-bottom: 1px solid #525252;
+  margin: auto;
+  margin-left: 1%;
 }
 
 .conWrap {
@@ -163,7 +178,6 @@ hr {
 
   .content-copy {
     color: white;
-
     opacity: 0;
     line-height: 22px;
     padding-top: 8px;
@@ -171,6 +185,10 @@ hr {
     position: absolute;
     top: 12px;
     left: 12px;
+  }
+
+  .content-copy .bold {
+    font-size: 22px;
   }
 
   &:nth-of-type(3n) {
@@ -196,6 +214,7 @@ hr {
 
   .opacity-copy {
     color: hsl(0, 0%, 80%);
+    font-family: "blanco", serif;
   }
 
   br {
