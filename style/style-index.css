@@ -44,9 +44,14 @@ p {
 }
 
 hr {
-  border: 2px solid #F7BC2B;
-  -webkit-text-decoration-style: wavy;
-          text-decoration-style: wavy;
+  display: none;
+}
+
+@media (max-width: 900px) {
+  hr {
+    display: block;
+    border-bottom: 1px solid #525252;
+  }
 }
 
 /* ---------- Links---------- */
@@ -156,7 +161,7 @@ body {
 
 .about p {
   font-size: 2.5vh;
-  line-height: 4.5vh;
+  line-height: 3.5vh;
   padding-bottom: 24px;
   font-family: "Blanco", serifs;
 }
@@ -183,7 +188,8 @@ body {
 
 @media (max-width: 900px) {
   .about {
-    padding-top: 50px;
+    padding-top: 80px;
+    padding-bottom: 20px;
     width: 100%;
     max-height: none;
     min-height: none;
@@ -195,7 +201,7 @@ body {
     padding-bottom: 24px;
   }
   .about .scream {
-    font-size: 21px;
+    font-size: 32px;
   }
 }
 
@@ -268,7 +274,6 @@ hr {
   padding-top: 36px;
   padding-bottom: 36px;
   text-transform: uppercase;
-  font-weight: bold;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -281,7 +286,7 @@ hr {
 @media (max-width: 900px) {
   .category {
     padding-top: 16px;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
   }
 }
 
@@ -293,6 +298,12 @@ hr {
   border-bottom: 1px solid #525252;
   margin: auto;
   margin-left: 1%;
+}
+
+@media (max-width: 900px) {
+  .category:after {
+    display: none;
+  }
 }
 
 .conWrap {
@@ -312,6 +323,7 @@ hr {
       flex-wrap: wrap;
   margin-left: -1%;
   margin-right: -1%;
+  padding-bottom: 50px;
 }
 
 .content-container .featured {
@@ -319,6 +331,9 @@ hr {
 }
 
 @media (max-width: 900px) {
+  .content-container {
+    padding-bottom: 0;
+  }
   .content-container .featured {
     width: 100%;
   }

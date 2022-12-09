@@ -44,9 +44,14 @@ p {
 }
 
 hr {
-  border: 2px solid #F7BC2B;
-  text-decoration-style: wavy;
+  display: none;
+
+  @media (max-width: $m-media) {
+    display: block;
+    border-bottom: 1px solid #525252;
+  }
 }
+
 /* ---------- Links---------- */
 
 a {
@@ -136,5 +141,6 @@ h1 {
   p {
     padding-bottom: 0;
   }
+
   @extend %flex;
 }

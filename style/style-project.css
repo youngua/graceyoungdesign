@@ -44,9 +44,14 @@ p {
 }
 
 hr {
-  border: 2px solid #F7BC2B;
-  -webkit-text-decoration-style: wavy;
-          text-decoration-style: wavy;
+  display: none;
+}
+
+@media (max-width: 900px) {
+  hr {
+    display: block;
+    border-bottom: 1px solid #525252;
+  }
 }
 
 /* ---------- Links---------- */
