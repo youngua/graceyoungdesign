@@ -103,6 +103,18 @@ h1 {
 }
 
 /* ---------- Components ---------- */
+.nav-container.scrolled {
+  background-color: #fff !important;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  -webkit-transition: background-color 200ms linear;
+  transition: background-color 200ms linear;
+}
+
+.nav-container.scrolled .nav-link {
+  color: #555;
+}
+
 .nav-container {
   position: fixed;
   top: 0;
