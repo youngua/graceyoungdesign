@@ -14,13 +14,13 @@
 * {
   padding: 0;
   margin: 0;
-  font-family: "B612", san-serif;
+  font-family: "GolosText", sans-serif;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
-  color: #525252;
+  color: #555;
   margin: 40px;
 }
 
@@ -57,37 +57,38 @@ hr {
 /* ---------- Links---------- */
 a {
   text-decoration: none;
-  color: #808dd0;
+  color: #6800EC;
 }
 
 a:hover {
-  color: #e86037;
+  color: #6800EC;
 }
 
 .nav-link {
-  color: #525252;
+  color: #000;
+  font-size: 20px;
 }
 
 /* ---------- Typography ---------- */
 @font-face {
-  font-family: "B612";
-  src: url("../fonts/B612-Regular.ttf") format("truetype");
+  font-family: "GolosText", sans-serif;
+  src: url("../fonts/GolosText-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "B612";
-  src: url("../fonts/B612-Bold.ttf") format("truetype");
+  font-family: "GolosText", sans-serif;
+  src: url("../fonts/GolosText-Medium.ttf") format("truetype");
+  font-weight: 600;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: "GolosText", sans-serif;
+  src: url("../fonts/GolosText-SemiBold.ttf") format("truetype");
   font-weight: 700;
-  font-style: bold;
-}
-
-@font-face {
-  font-family: "Blanco";
-  src: url("../fonts/Blanco-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+  font-style: semi-bold;
 }
 
 h1 {
@@ -104,15 +105,22 @@ h1 {
 
 /* ---------- Components ---------- */
 .nav-container.scrolled {
-  background-color: #fff !important;
+  background-color: #F4F0FF !important;
   padding-top: 20px !important;
   padding-bottom: 20px !important;
   -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
 }
 
-.nav-container.scrolled .nav-link {
-  color: #555;
+.nav-container.scrolled .nav-link,
+.nav-container.scrolled #clown {
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  .nav-container.scrolled {
+    top: 0;
+  }
 }
 
 .nav-container {
@@ -142,6 +150,7 @@ h1 {
 
 @media (max-width: 900px) {
   .nav-container {
+    top: 20px;
     padding: 16px;
   }
   .nav-container p {
@@ -159,32 +168,47 @@ h1 {
 
 /* ---------- Variables ---------- */
 body {
-  background-image: url("../projects/img/background-image.jpg");
-  background-repeat: no-repeat;
+  background-color: #F4F0FF;
 }
 
 /* ---------- Header ---------- */
+.nav-container.scrolled #clown {
+  font-size: 20px;
+  position: relative;
+  top: 0;
+}
+
+.nav-container #clown {
+  font-size: 60px;
+  position: absolute;
+  top: 70px;
+  color: #000;
+}
+
+@media (max-width: 900px) {
+  .nav-container #clown {
+    font-size: 40px;
+    position: relative;
+    top: 0;
+  }
+}
+
 .about {
   position: relative;
-  padding-top: 150px;
-  padding-bottom: 100px;
-  width: 65%;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  width: 50%;
 }
 
 .about p {
   font-size: 2.5vh;
-  line-height: 3.5vh;
+  line-height: 28px;
   padding-bottom: 24px;
-  font-family: "Blanco", serifs;
+  font-family: "GolosText", sans-serif;
 }
 
 .about p:last-child {
   font-size: 18px;
-}
-
-.about .scream {
-  font-size: 40px;
-  line-height: 40px;
 }
 
 @media (max-width: 1024px) {
@@ -212,110 +236,15 @@ body {
     line-height: 24px;
     padding-bottom: 24px;
   }
-  .about .scream {
-    font-size: 32px;
-  }
-}
-
-.hand-pointer {
-  position: absolute;
-  font-size: 24px;
-  right: 40px;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-}
-
-@media (max-width: 900px) {
-  .hand-pointer {
-    display: none;
-  }
-}
-
-.bounce {
-  -webkit-animation-name: bounce;
-          animation-name: bounce;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-}
-
-@-webkit-keyframes bounce {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
-@keyframes bounce {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  50% {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
 }
 
 /* ---------- Categories ---------- */
-hr {
-  margin-top: 100px;
-}
-
-@media (max-width: 900px) {
-  hr {
-    margin-top: 34px;
-  }
+#visual {
+  display: none;
 }
 
 .category {
-  font-size: 18px;
-  padding-top: 36px;
-  padding-bottom: 36px;
-  text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-@media (max-width: 900px) {
-  .category {
-    padding-top: 16px;
-    padding-bottom: 30px;
-  }
-}
-
-.category:after {
-  content: "";
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1;
-          flex: 1 1;
-  border-bottom: 1px solid #525252;
-  margin: auto;
-  margin-left: 1%;
-}
-
-@media (max-width: 900px) {
-  .category:after {
-    display: none;
-  }
+  padding-bottom: 20px;
 }
 
 .conWrap {
@@ -330,12 +259,15 @@ hr {
   }
 }
 
+.container .content-container:nth-child(1) {
+  padding-bottom: 10%;
+}
+
 .content-container {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-left: -1%;
   margin-right: -1%;
-  padding-bottom: 50px;
 }
 
 .content-container .featured {
@@ -359,11 +291,8 @@ hr {
 .content {
   width: 23.8%;
   margin: 1%;
-  margin-top: 0;
   position: relative;
-  padding-bottom: 23.74%;
-  height: 0;
-  background: #525252;
+  border-radius: 12px;
 }
 
 .content #thumb-sq {
@@ -372,6 +301,7 @@ hr {
 
 .content img {
   max-width: 100%;
+  border-radius: 12px;
   opacity: 1;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
@@ -385,7 +315,7 @@ hr {
 }
 
 .content .content-copy {
-  color: white;
+  color: #000;
   opacity: 0;
   line-height: 22px;
   padding-top: 8px;
@@ -420,8 +350,8 @@ hr {
 }
 
 .content .opacity-copy {
-  color: #cccccc;
-  font-family: "blanco", serif;
+  color: #555;
+  font-family: "GolosText", sans-serif;
 }
 
 .content br {
@@ -440,7 +370,7 @@ hr {
   .content .content-copy {
     background: none;
     opacity: 1;
-    color: #525252;
+    color: #000;
     position: relative;
     line-height: 22px;
     padding-top: 0px;

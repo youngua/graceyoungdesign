@@ -1,8 +1,8 @@
 /* ---------- Variables ---------- */
-$font-family: "B612", san-serif;
+$font-family: "GolosText", sans-serif;
 
-$copy-color: #525252;
-$link-color: #808dd0;
+$copy-color: #555;
+$link-color: #6800EC;
 
 %flex {
   display: flex;
@@ -60,33 +60,34 @@ a {
 }
 
 a:hover {
-  color: #e86037;
+  color: #6800EC;
 }
 
 .nav-link {
-  color: $copy-color;
+  color: #000;
+  font-size: 20px;
 }
 
 /* ---------- Typography ---------- */
 @font-face {
-  font-family: "B612";
-  src: url("../fonts/B612-Regular.ttf") format("truetype");
+  font-family: "GolosText", sans-serif;
+  src: url("../fonts/GolosText-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "B612";
-  src: url("../fonts/B612-Bold.ttf") format("truetype");
+  font-family: "GolosText", sans-serif;
+  src: url("../fonts/GolosText-Medium.ttf") format("truetype");
+  font-weight: 600;
+  font-style: medium;
+}
+
+@font-face {
+  font-family: "GolosText", sans-serif;
+  src: url("../fonts/GolosText-SemiBold.ttf") format("truetype");
   font-weight: 700;
-  font-style: bold;
-}
-
-@font-face {
-  font-family: "Blanco";
-  src: url("../fonts/Blanco-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
+  font-style: semi-bold;
 }
 
 h1 {
@@ -102,13 +103,18 @@ h1 {
 /* ---------- Components ---------- */
 
 .nav-container.scrolled {
-  background-color: #fff !important;
+  background-color: #F4F0FF !important;
   padding-top: 20px !important;
   padding-bottom: 20px !important;
   transition: background-color 200ms linear;
 
-  .nav-link {
-    color: #555;
+  .nav-link,
+  #clown {
+    color: #000;
+  }
+
+  @media (max-width: $m-media) {
+    top: 0;
   }
 }
 
@@ -138,6 +144,7 @@ h1 {
   }
 
   @media (max-width: $m-media) {
+    top: 20px;
     padding: 16px;
 
     p {

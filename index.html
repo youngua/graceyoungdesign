@@ -1,7 +1,7 @@
 <!-- 
 2023 Portfolio
 Designed & Coded by Grace Young
-Last Updated: Dec 8, 2022
+Last Updated: Mar 22, 2023
 -->
 
 <!DOCTYPE html>
@@ -35,84 +35,62 @@ Last Updated: Dec 8, 2022
     
     <!-- header container -->
     <div class="nav-container">
-      <p><a id="clown" class="nav-link" href="/index.html">Grace Young</a></p>
-      <p><a class="nav-link" href="GraceYoung_Resume.pdf" target="_blank">Resume</a></p>
+      <p><class id="clown">Grace Young</class></p>
+      <div class="nav-content">
+        <p><a class="nav-link" href="/about.html">About</a></p>
+        <p>
+          <a class="nav-link" href="../../../GraceYoung_Resume.pdf" target="_blank">Resume</a>
+        </p>
+      </div>
     </div>
 
     <!-- about container -->
     <div class="about">
       <p>
-        <span class="scream">hihi, I’m Grace! </span>
-      </p>
-      <p>
-          As a product designer, I’ve designed experiences for retail and fintech.
-      </p>
-
-      <p>
-        I’m biased towards action and enjoy a collaborative and iterative design process while remembering to take a minute to sip hot water. Outside of work, I’m an experimental chef, avid reader, frugal minimalist, and digital painter.
-      </p>
-
-      <p>
-        You can contact me through <a href="mailto:gyoung@alumni.risd.edu" target="_blank">Gmail</a>, check
-        out my
-        <a href="https://www.linkedin.com/in/grace-young/" target="_blank"
-          >LinkedIn</a
-        >
-        or
-        <a href="https://www.instagram.com/gyoung.design/" target="_blank"
-          >Insta</a
-        >.
+        A Digital & Product Designer who worked on b2b and b2c products and features for fintech, retail-tech, e-commerce, and digital platforms. <a href="about.html">Learn more →</a>
       </p>
     </div>
-    <div class="hand-pointer bounce">👇</div>
-
-  <hr>
-    <div class="category">💻 Interaction & UI Design</div>  
 
     <!-- uxui content container -->
+    <div class="container">
     <div class="content-container conWrap">
+      <div class="content featured">
+        <a href="/"
+          ><img
+            id="thumb-rect"
+            src="projects/uxui/portfolio-model/img/thumb.jpg" /><img
+            id="thumb-sq"
+            src="projects/uxui/portfolio-model/img/thumb-sq.jpg"
+        /></a>
+        <div class="content-copy">
+          <span class="bold">Portfolio Model</span>
+          <br /><span class="opacity-copy">Portfolio models tailored to individual clients based on their financial goals and risk tolerance, empowering them to take control of their financial future. Case study in progress</span>
+        </div>
+      </div>
+
       <div class="content featured">
         <a href="projects/uxui/stockwell/project.html"
           ><img
             id="thumb-rect"
-            src="projects/uxui/stockwell/img/thumb.jpg" /><img
+            src="projects/uxui/stockwell/img/thumb.jpg" />
+            <img
             id="thumb-sq"
             src="projects/uxui/stockwell/img/thumb-sq.jpg"
         /></a>
         <div class="content-copy">
           <span class="bold">Retail Automation Tool</span>
-          <br /><span class="opacity-copy">Streamlining the retail team's workflow</span>
-        </div>
-      </div>
-
-      <div class="content square">
-        <a href="projects/uxui/because/project.html"
-          ><img src="projects/uxui/because/img/thumb.jpg"
-        /></a>
-        <div class="content-copy">
-          <span class="bold">BeCause</span>
-          <br /><span class="opacity-copy"
-            >Joining hands for the causes you care about</span
-          >
-        </div>
-      </div>
-
-      <div class="content square">
-        <a href="projects/uxui/healthcheck/project.html"
-          ><img src="projects/uxui/healthcheck/img/thumb.jpg"
-        /></a>
-        <div class="content-copy">
-          <span class="bold">Healthcheck</span>
-          <br /><span class="opacity-copy">Tracking urinalysis test</span>
+          <br /><span class="opacity-copy">The automation tool provides inventory recommendations to “Stockwell” stores, simplifying the internal retail team's workflow for managing store revenue. </span>
         </div>
       </div>
     </div>
 
-    <hr />
-    <div class="category">🖼 Visual</div>
+    <div id="visual-anchor"></div>
+    <p></p>
+    <div class="category">View my graphic / visual design works. <a href="#visual-anchor" onclick="toggle_visibility('visual');">Click to view ↓</a>
+    </div>
 
     <!-- visual content container -->
-    <div class="content-container conWrap">
+    <div class="content-container conWrap" id="visual">
       <div class="content featured">
         <a href="projects/visual/healthy-zen/project.html">
          <img id="thumb-rect" src="projects/visual/healthy-zen/img/thumb.gif" />
@@ -186,6 +164,7 @@ Last Updated: Dec 8, 2022
         </div>
       </div>
     </div>
+  </div>
 
     <div class="footer">
       <p>Ⓒ Grace Young</p>

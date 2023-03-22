@@ -1,0 +1,75 @@
+/* ---------- Imports ---------- */
+@import "global";
+
+/* ---------- Variables ---------- */
+$m-media: 900px;
+
+body {
+    background-color: #F7FFF2;
+}
+
+.nav-container.scrolled {
+    background-color: #F7FFF2 !important;
+}
+
+/* ---------- about ---------- */
+
+.about {
+    margin: 10vw 20vw 0 20vw;
+
+    @media (max-width: $m-media) {
+        margin: 20vw 0 0 0;
+    }
+}
+
+.header {
+    font-size: 24px;
+    font-weight: 500;
+    color: #000;
+    padding-bottom: 20px;
+    padding-top: 40px;
+}
+
+
+/* ---------- flexbox ---------- */
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+
+    a {
+        color: $copy-color;
+    }
+
+    a:hover {
+        color: $link-color;
+    }
+}
+
+.flex-left {
+    width: 15%;
+
+    p {
+        color: #000;
+        font-weight: 500;
+    }
+
+    img {
+        width: 80%;
+    }
+}
+
+.flex-right {
+    width: 85%;
+
+    #clown {
+        font-size: 40px;
+        color: #000;
+        padding-left: 20px;
+    }
+
+    .blurb {
+        padding-top: 10px;
+        padding-left: 20px;
+    }
+}
