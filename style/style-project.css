@@ -144,6 +144,13 @@ h1 {
   padding-left: 40px;
 }
 
+@media (max-width: 900px) {
+  .nav-container .nav-content p {
+    float: right;
+    padding-left: 15px;
+  }
+}
+
 .nav-container p {
   padding-bottom: 0;
 }

@@ -137,6 +137,11 @@ h1 {
   .nav-content p {
     float: left;
     padding-left: 40px;
+
+    @media (max-width: $m-media) {
+      float: right;
+      padding-left: 15px;
+    }
   }
 
   p {

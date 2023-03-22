@@ -144,6 +144,13 @@ h1 {
   padding-left: 40px;
 }
 
+@media (max-width: 900px) {
+  .nav-container .nav-content p {
+    float: right;
+    padding-left: 15px;
+  }
+}
+
 .nav-container p {
   padding-bottom: 0;
 }
@@ -187,7 +194,7 @@ body {
 
 @media (max-width: 900px) {
   .nav-container #clown {
-    font-size: 40px;
+    font-size: 26px;
     position: relative;
     top: 0;
   }
@@ -224,7 +231,7 @@ body {
 
 @media (max-width: 900px) {
   .about {
-    padding-top: 80px;
+    padding-top: 70px;
     padding-bottom: 20px;
     width: 100%;
     max-height: none;
