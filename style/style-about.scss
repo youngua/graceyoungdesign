@@ -18,7 +18,7 @@ body {
     margin: 10vw 20vw 0 20vw;
 
     @media (max-width: $m-media) {
-        margin: 20vw 0 0 0;
+        margin: 30vw 0 0 0;
     }
 }
 
@@ -57,19 +57,48 @@ body {
     img {
         width: 80%;
     }
+
+    @media (max-width: $m-media) {
+        width: 30%;
+
+        img {
+            width: 100%;
+        }
+    }
 }
 
 .flex-right {
-    width: 85%;
+    width: 80%;
 
     #clown {
         font-size: 40px;
         color: #000;
-        padding-left: 20px;
     }
 
     .blurb {
         padding-top: 10px;
+    }
+
+    #clown,
+    .blurb {
         padding-left: 20px;
+    }
+
+    @media (max-width: $m-media) {
+        width: 90%;
+
+        #clown,
+        .blurb {
+            padding-top: 8px;
+        }
+
+        #clown {
+            font-size: 30px;
+        }
+
+        .blurb {
+            padding-top: 5px;
+            font-size: 16px;
+        }
     }
 }
