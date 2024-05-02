@@ -1,12 +1,8 @@
 /* ---------- Imports ---------- */
 /* ---------- Variables ---------- */
-.nav-container, .footer, .project-content, .two-rects, .two-sq {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.project-content, .footer, .nav-container {
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding-bottom: 0;
 }
 
@@ -15,42 +11,27 @@
   padding: 0;
   margin: 0;
   font-family: "GolosText", sans-serif;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
   color: #555;
-  margin: 40px;
+  margin: 2% 15% 2% 15%;
 }
-
 @media (max-width: 900px) {
   body {
-    margin: 16px;
+    margin: 24px;
   }
 }
 
 p {
-  font-size: 18px;
-  line-height: 28px;
-  padding-bottom: 28px;
+  font-size: 16px;
+  line-height: 24px;
 }
-
 @media (max-width: 900px) {
   p {
     line-height: 24px;
     padding-bottom: 24px;
-  }
-}
-
-hr {
-  display: none;
-}
-
-@media (max-width: 900px) {
-  hr {
-    display: block;
-    border-bottom: 1px solid #525252;
   }
 }
 
@@ -76,47 +57,29 @@ a:hover {
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
   font-family: "GolosText", sans-serif;
   src: url("../fonts/GolosText-Medium.ttf") format("truetype");
   font-weight: 600;
   font-style: medium;
 }
-
 @font-face {
   font-family: "GolosText", sans-serif;
   src: url("../fonts/GolosText-SemiBold.ttf") format("truetype");
   font-weight: 700;
   font-style: semi-bold;
 }
-
-h1 {
-  font-size: 48px;
-  padding-top: 100px;
-  font-weight: 400;
-}
-
-@media (max-width: 900px) {
-  h1 {
-    font-size: 40px;
-  }
-}
-
 /* ---------- Components ---------- */
 .nav-container.scrolled {
   background-color: #F4F0FF !important;
   padding-top: 20px !important;
   padding-bottom: 20px !important;
-  -webkit-transition: background-color 200ms linear;
   transition: background-color 200ms linear;
 }
-
 .nav-container.scrolled .nav-link,
 .nav-container.scrolled #clown {
   color: #000;
 }
-
 @media (max-width: 900px) {
   .nav-container.scrolled {
     top: 0;
@@ -130,35 +93,30 @@ h1 {
   left: 0;
   width: 100%;
   z-index: 999;
-  padding: 40px;
+  padding: 2% 15% 2% 15%;
 }
-
 @media (min-width: 900px) {
   .nav-container #clown {
     font-size: 22px;
   }
 }
-
 .nav-container .nav-content p {
   float: left;
   padding-left: 40px;
 }
-
 @media (max-width: 900px) {
   .nav-container .nav-content p {
     float: right;
     padding-left: 15px;
   }
 }
-
 .nav-container p {
   padding-bottom: 0;
 }
-
 @media (max-width: 900px) {
   .nav-container {
     top: 20px;
-    padding: 16px;
+    padding: 24px;
   }
   .nav-container p {
     font-size: 16px;
@@ -168,68 +126,166 @@ h1 {
 .footer {
   padding-top: 100px;
 }
-
 .footer p {
   padding-bottom: 0;
 }
 
 /* ---------- Variables ---------- */
-.nav-container, .footer, .project-content, .two-rects, .two-sq {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.project-content, .nav-container, .footer {
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding-bottom: 16px;
-}
-
-.two-rects img, .two-sq img {
-  width: 49.5%;
-  height: 100%;
-}
-
-@media (max-width: 900px) {
-  .two-rects, .two-sq {
-    display: block;
-    padding-bottom: 0;
-  }
-  .two-rects img, .two-sq img {
-    width: 100%;
-    padding-bottom: 12px;
-  }
 }
 
 /* ---------- Body ---------- */
 body {
-  background-color: #F5F2F1;
+  margin: 8% 24% 2% 24% !important;
+}
+@media (max-width: 1024px) {
+  body {
+    margin: 10% 15% 2% 15% !important;
+  }
+}
+@media (max-width: 900px) {
+  body {
+    margin: 24% 24px 8% 24px !important;
+  }
 }
 
 /* ---------- Navigation ---------- */
 .nav-container.scrolled {
-  background-color: #F5F2F1 !important;
+  background-color: #FFF !important;
 }
 
-/* ---------- Project ---------- */
+/* ---------- Mark ---------- */
+@keyframes mark {
+  to {
+    background-position: -100%;
+  }
+}
+p {
+  isolation: isolate;
+}
+
+mark {
+  left: -2px;
+  padding: 0.1em 0.5em;
+  width: -moz-max-content;
+  width: max-content;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, #fff 50%, #DFE1FF 50%);
+  background-position: 0% 0;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  border-radius: 4px;
+}
+
+mark.active {
+  animation-name: mark;
+}
+
+@keyframes mark {
+  from {
+    background-position: 0% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}
+/* ---------- Typography ---------- */
+h1 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #000;
+}
+@media (max-width: 900px) {
+  h1 {
+    font-size: 40px;
+  }
+}
+
+h2 {
+  color: #000;
+  font-size: 34px;
+  font-weight: 500;
+  padding-bottom: 14px;
+}
+
+h3 {
+  color: #000;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  padding-bottom: 14px;
+}
+
+h4 {
+  color: #000;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  padding-bottom: 12px;
+}
+
 @media (max-width: 900px) {
   p {
     font-size: 16px;
   }
 }
 
-.project-content {
-  padding-top: 30px;
-  padding-bottom: 100px;
+li {
+  line-height: 22px;
+  padding-top: 20px;
+  margin-left: 20px;
 }
 
+hr {
+  border: 1px solid #DFE1FF;
+  margin: 60px 0 60px 0;
+}
+
+.bold {
+  color: #000;
+  font-weight: 600;
+}
+
+/* ---------- Project ---------- */
+.overview-container .overview-row {
+  display: flex;
+  -moz-column-gap: 8%;
+       column-gap: 8%;
+}
+.overview-container .overview-row:nth-child(1) {
+  padding-bottom: 5%;
+}
+.overview-container .overview-content {
+  width: 100%;
+}
+.overview-container .overview-header {
+  display: flex;
+  -moz-column-gap: 2%;
+       column-gap: 2%;
+}
+.overview-container .overview-header img {
+  margin-top: -12px;
+}
+
+.content-container {
+  padding: 40px 0 40px 0;
+}
+
+.project-content {
+  padding-top: 30px;
+  padding-bottom: 60px;
+}
 .project-content .content p {
   font-family: "GolosText", sans-serif;
 }
-
 .project-content .content:nth-child(1) {
-  width: 50%;
+  width: 100%;
 }
-
 @media (max-width: 900px) {
   .project-content {
     display: block;
@@ -243,14 +299,14 @@ body {
 .rect {
   width: 100%;
   height: 100%;
-  padding-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #E6E6E6;
 }
 
 video {
   width: 49.5%;
   height: 100%;
 }
-
 @media (max-width: 900px) {
   video {
     width: 100%;
@@ -261,19 +317,13 @@ video {
 
 /* ---------- Next Project ---------- */
 .next-project {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding-top: 100px;
 }
-
 .next-project #right-hand {
   padding-left: 12px;
 }
-
 @media (max-width: 900px) {
   .next-project {
     display: block;
@@ -284,5 +334,4 @@ video {
   .next-project #right-hand {
     padding-left: 0;
   }
-}
-/*# sourceMappingURL=style-project.css.map */
+}/*# sourceMappingURL=style-project.css.map */

@@ -1,15 +1,42 @@
+<!-- 
+2024 Portfolio
+Designed & Coded by Grace Young
+Last Updated: May 2, 2024
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8772YQSH0"></script>
+   
+    <!-- why so loaded loool -->
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V5H9ZEHGV8"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-D8772YQSH0');
-    </script> -->
+      gtag('config', 'G-V5H9ZEHGV8');
+    </script>
+
+    <!-- Hotjar Tracking Code for Site 4966104 -->
+    <script>
+      (function(h,o,t,j,a,r){
+          h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+          h._hjSettings={hjid:4966104,hjsv:6};
+          a=o.getElementsByTagName('head')[0];
+          r=o.createElement('script');r.async=1;
+          r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+          a.appendChild(r);
+      })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    <!-- Posthog Tracking jaja -->
+    <script>
+      !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+      posthog.init('phc_hVTyZuwLWrQIMhfg26T3d1vTHo00zRqXcIMIcieU8dG',{api_host:'https://us.i.posthog.com'})
+    </script>
 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -32,61 +59,164 @@
 
       <div class="nav-content">
         <p><a class="nav-link" href="/index.html">Home</a></p>
+        <p><a class="nav-link" href="/about.html">About</a></p>
         <p>
-          <a class="nav-link" href="../../../GraceYoung_Resume.pdf" target="_blank">Resume</a>
+          <a class="nav-link" href="../../../GraceYoung_Resume.pdf" target="_blank">Resume ↗</a>
         </p>
       </div>
     </div>
 
     <!-- project container -->
-    <h1>Retail Automation Tool</h1>
+    <h1>Designing an automation tool to manage 1,000+ stores</h1>
 
     <div class="project-content">
       <div class="content">
         <p>
-          The retail automation tool is the retail team’s internal planning tool that utilizes machine learning and crowd-sourcing to suggest items that need to be placed within each Stockwell machine. The result of the tool streamlined the retail team’s workflow from three weeks to one week.
-        </p>
+          I designed an automation tool for the Stockwell’s retail team. Leveraging machine learning and crowd-sourcing, the tool provides stocking suggestions for Stockwell machines, significantly boosting efficiency. <mark>As the lead designer, I worked with a product manager, two engineers, and two retail buyers.</mark></p>
       </div>
     </div>
 
-    <!-- project images -->
     <img class="rect" src="img/1.jpg" />
 
-    <div class="two-rects">
-      <img src="img/2.jpg" />
-      <img src="img/3.jpg" />
+    <!-- Project Overview -->
+    <hr>
+    <div class="overview-container">
+      <div class="overview-row">
+      <div class="overview-content">
+          <div class="overview-header"><img src="/projects/img/problem.svg" /><h4>Problem</h4></div>
+            <p>It was unsustainable for our five person retail team to manage 1,000+ Stockwell stores.</p>
+          </div>
+      
+          <div class="overview-content">
+            <div class="overview-header"><img src="/projects/img/hypothesis.svg" /><h4>Hypothesis</h4></div>
+              <p>If we provide the retail team with an automated workflow tool, we can reduce headcount, boost revenue growth, reduce operational costs, and efficiently manage large store groups with a lean team.</p>
+          </div>
+      </div>
+
+      <div class="overview-row">
+        <div class="overview-content">
+          <div class="overview-header"><img src="/projects/img/solution.svg" /><h4>Solution</h4></div>
+          <p>Designed a dashboard as an automation tool to streamline the retail team’s workflow.</p>
+        </div>
+
+        <div class="overview-content">
+          <div class="overview-header"><img src="/projects/img/outcome.svg" /><h4>Outcome</h4></div>
+          <p>After the tool launched, I had already departed Stockwell in 2019. Unfortunately, the company closed in 2020, and I believe the tool had only <mark>a brief period of use before the onset of COVID-19.</mark></p>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+    <!-- Process -->
+    <h2>The Process</h2>
+
+    <div class="content-container">
+      <h3>Gaining insights from the user research</h3>
+      <p>I joined the project three months after initial user research and <mark>had to quickly get up to speed.</mark></p>
     </div>
 
-    <div class="two-rects">
-      <img src="img/4.jpg" />
-      <img src="img/5.jpg" />
+    <div class="content-container">
+      <h3>Unveiling the need for workflow automation</h3>
+      <p>Here’s what unfolded as I delved into the project and identified the key challenges:</p>
+      <ul>
+        <li>
+          <span class="bold">Traditional vs. Stockwell’s Approach</span> –– Traditional retail giants like Walmart and Target use specific retail buyers for different product lines. However, Stockwell’s unique model needs buyers to research and customize product selections for each machine. While this method works, <mark>it poses scalability challenges that need automation.</mark>
+        </li>
+        <li>
+          <span class="bold">Tackling Delivery shortcomings</span> –– A crucial aspect of Stockwell’s model involves delivering products to each machine unit. However, <mark>delivering and stocking only a single product per visit proved costly.</mark> The ideal scenario for Stockwell is to achieve a balanced distribution of sales across all products. 
+        </li>
+      </ul>
     </div>
 
-    <img class="rect" src="img/6.jpg" />
-    <img class="rect" src="img/6-5.jpg" />
+    <img class="rect" src="img/2.jpg" />
+
+    <div class="content-container">
+      <h3>Understanding our users and their workflow</h3>
+      <p>Our primary users were <mark>five members of our retail team</mark>, while two were deeply involved in daily store operations. The need for workflow optimization became evident after we discovered they <mark>manage store tasks manually via cumbrecome spreadsheets.</mark></p>
+    </div>
+
+    <div class="content-container">
+      <h4>Identifying the challenges</h4>
+      <p>As we dissected the issues, we distilled our findings into the following key challenges:</p>
+        <ul>
+          <li><mark>Cost of expansion</mark> – Hiring additional retail buyers for each new store group incurred significant expenses.</li>
+          <li><mark>Delayed store optimizations</mark> – The length to optimize 1,000+ stores take 2 to 3 weeks. This delay surfacing high selling products and thus impacts revenue growth.
+          </li>
+          <li><mark>Escalating operational costs</mark> - Prolonged optimization timelines led to increased overhead costs for warehousing and transportation. </li>
+        </ul>
+    </div>
+    
+    <div class="content-container">
+      <h4>Envisioning solutions and  potential outcomes</h4>
+      <p>Envisioning the adoption of a workflow automation tool by the retail team, we hypothesized on these potential outcomes:
+      </p>
+        <ul>
+          <li><mark>Enhanced scalability</mark> – With an internal operation tool tailored to Stockwell’s retail model, we could effectively manage more stores with a lean team.</li>
+          <li><mark>Streamlined store optimizations</mark> – Leveraging AL/ML for store optimization could accelerate revenue growth within a shorter time frame, less than 2 to 3 weeks.</li>
+          <li><mark>Reduced Operational Costs</mark> – Swift store optimization would translate to lower operational expenses in the long run, enabling more efficient inventory and space management.</li>
+        </ul>
+    </div>
+
+    <div class="content-container">
+      <h3>Mapping the new workflow</h3>
+      <p>Before designing the automation tool, <mark>our team investigated the retail buyer’s store merchandising process.</mark> Armed with this insight, we mapped out the new workflow:</p>
+    </div>
+
+    <img class="rect" src="img/3.jpg" />
+
+    <div class="content-container">
+      <h3>Sketching the blueprint before the hi-fi designs</h3>
+      <p><mark>I sketched wireframes to visualize the tool’s structure and core components.</mark> These sketches get translated into UI designs to facilitate communication of interface decisions to the team. Following feedback sessions, I iterated on each feature to ensure alignment with our objectives.</p>
+    </div>
+
+    <img class="rect" src="img/4.jpg" />
+
+    <hr>
+    <h2>The Solution</h2>
     <img class="rect" src="img/7.jpg" />
     <img class="rect" src="img/8.jpg" />
     <img class="rect" src="img/9.jpg" />
+
+    <div class="content-container">
+      <p>Upon my departure, the Stockwell Automation Tool was launched in 2019, marking the culmination of our efforts. While I was not privy to quantitative data post-launch, I firmly believed in the positive impact it would have.</p>
+      <ul>
+        <li><mark>The anticipated impact of the Stockwell automation tool was designed to reduce the restocking timeline from three weeks to just one week.</mark></li>
+      </ul>
+    </div>
+    <hr>
+
+    <div class="content-container">
+      <h3>Contributing to Stockwell’s design system</h3>
+      <p>Amidst my primary project, <mark>I seized the chance to collaborate on auxiliary endeavors. One such endeavor involved contributing to Stockwell’s design system,</mark>a cornerstone of our design ethos. Below is a snapshot showcasing my contributions:</p>
+    </div>
+
     <img class="rect" src="img/10.jpg" />
     <img class="rect" src="img/11.jpg" />
 
-    <div class="two-rects">
-      <img src="img/12.jpg" />
-      <img src="img/13.jpg" />
+    <div class="content-container">
+      <h3>My Learnings and future improvments</h3>
+      <br>
+      <p><span class="bold">Asking the right questions</span> – Throughout the project, I leaned on my product manager for insights into the technical aspects. However, I discovered the invaluable perspective offered by engineers. <mark>Learning to frame questions effectively became a habit, shaping my approach at every stage.</mark></p>
+      <br>
+      <p><span class="bold">Understanding user behavior</span> – Reflecting on past experiences, I realized the importance of observing user actions rather than solely relying on their verbal feedback. <mark>Moving forward, I prioritize user testing sessions to glean insights into their behaviors and preferences.</mark></p>
+      <br>
+      <p><span class="bold">Harnessing the design system</span> – Initially I felt constrained by Stockwell’s design system, but after, I saw it as a chance for growth. While the existing color palette posed limitations, <mark>I learned to advocate for necessary changes and initiate discussions with colleagues to enhance our design patterns.</mark></p>
     </div>
 
+    <img class="rect" src="img/12.jpg" />
+
     <!-- Check out other contents -->
-    <!-- <div class="next-project">
+    <div class="next-project">
       <p>Check out the next work here</p>
       <p>
         <span id="right-hand">👉🏻</span>
-        <a id="link" href="../healthcheck/project.html">Healthcheck</a>
+        <a id="link" href="../portfolio-model/project.html">Financial Portfolio Model</a>
       </p>
-    </div> -->
+    </div>
 
     <div class="footer">
       <p>Ⓒ Grace Young</p>
-      <p>2023</p>
+      <p>2024</p>
     </div>
     
     <!-- jQuery library -->

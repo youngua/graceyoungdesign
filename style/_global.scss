@@ -25,30 +25,21 @@ $m-media: 900px;
 
 body {
   color: $copy-color;
-  margin: 40px;
+  margin: 2% 15% 2% 15%;
 
   @media (max-width: $m-media) {
-    margin: 16px;
+    margin: 24px;
   }
 }
 
 p {
-  font-size: 18px;
-  line-height: 28px;
-  padding-bottom: 28px;
+  font-size: 16px;
+  line-height: 24px;
+  // padding-bottom: 28px;
 
   @media (max-width: $m-media) {
     line-height: 24px;
     padding-bottom: 24px;
-  }
-}
-
-hr {
-  display: none;
-
-  @media (max-width: $m-media) {
-    display: block;
-    border-bottom: 1px solid #525252;
   }
 }
 
@@ -90,16 +81,6 @@ a:hover {
   font-style: semi-bold;
 }
 
-h1 {
-  font-size: 48px;
-  padding-top: 100px;
-  font-weight: 400;
-
-  @media (max-width: $m-media) {
-    font-size: 40px;
-  }
-}
-
 /* ---------- Components ---------- */
 
 .nav-container.scrolled {
@@ -125,7 +106,7 @@ h1 {
   left: 0;
   width: 100%;
   z-index: 999;
-  padding: 40px;
+  padding: 2% 15% 2% 15%;
   @extend %flex;
 
   #clown {
@@ -150,7 +131,7 @@ h1 {
 
   @media (max-width: $m-media) {
     top: 20px;
-    padding: 16px;
+    padding: 24px;
 
     p {
       font-size: 16px;

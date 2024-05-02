@@ -3,6 +3,7 @@
 
 /* ---------- Variables ---------- */
 $m-media: 900px;
+$purple: #DFE1FF;
 
 %flex {
   display: flex;
@@ -32,33 +33,163 @@ $m-media: 900px;
 /* ---------- Body ---------- */
 
 body {
-  background-color: #F5F2F1;
+  // background-color: #F5F2F1;
+  margin: 8% 24% 2% 24% !important;
+
+  @media (max-width: 1024px) {
+    margin: 10% 15% 2% 15% !important;
+  }
+
+  @media (max-width: $m-media) {
+    margin: 24% 24px 8% 24px !important;
+  }
 }
 
 /* ---------- Navigation ---------- */
 
 .nav-container.scrolled {
-  background-color: #F5F2F1 !important;
+  background-color: #FFF !important;
 }
 
-/* ---------- Project ---------- */
+/* ---------- Mark ---------- */
+@keyframes mark {
+  to {
+    background-position: -100%;
+  }
+}
+
 p {
+  isolation: isolate;
+}
+
+mark {
+  left: -2px;
+  padding: 0.1em 0.5em;
+  width: max-content;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, #fff 50%, $purple 50%);
+  background-position: 0% 0;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  border-radius: 4px;
+}
+
+mark.active {
+  animation-name: mark;
+}
+
+@keyframes mark {
+  from {
+    background-position: 0% 0;
+  }
+
+  to {
+    background-position: -100% 0;
+  }
+}
+
+/* ---------- Typography ---------- */
+
+h1 {
+  font-size: 40px;
+  font-weight: 400;
+  color: #000;
+
+  @media (max-width: $m-media) {
+    font-size: 40px;
+  }
+}
+
+h2 {
+  color: #000;
+  font-size: 34px;
+  font-weight: 500;
+  padding-bottom: 14px;
+}
+
+h3 {
+  color: #000;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  padding-bottom: 14px;
+}
+
+h4 {
+  color: #000;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 500;
+  padding-bottom: 12px;
+}
+
+p {
+
   @media (max-width: $m-media) {
     font-size: 16px;
   }
 }
 
+li {
+  line-height: 22px;
+  padding-top: 20px;
+  margin-left: 20px;
+}
+
+hr {
+  border: 1px solid #DFE1FF;
+  margin: 60px 0 60px 0;
+}
+
+.bold {
+  color: #000;
+  font-weight: 600;
+}
+
+/* ---------- Project ---------- */
+
+.overview-container {
+
+  .overview-row {
+    display: flex;
+    column-gap: 8%;
+  }
+
+  .overview-row:nth-child(1) {
+    padding-bottom: 5%;
+  }
+
+  .overview-content {
+    width: 100%;
+  }
+
+  .overview-header {
+    display: flex;
+    column-gap: 2%;
+
+    img {
+      margin-top: -12px;
+    }
+  }
+}
+
+.content-container {
+  padding: 40px 0 40px 0;
+}
+
 .project-content {
   @extend %flex;
   padding-top: 30px;
-  padding-bottom: 100px;
+  padding-bottom: 60px;
 
   .content p {
     font-family: "GolosText", sans-serif;
   }
 
   .content:nth-child(1) {
-    width: 50%;
+    width: 100%;
   }
 
   @media (max-width: $m-media) {
@@ -74,19 +205,8 @@ p {
 .rect {
   width: 100%;
   height: 100%;
-  padding-bottom: 12px;
-}
-
-.two-rects {
-  @extend %flex;
-  @extend %img-desktop;
-  @extend %img-mobile;
-}
-
-.two-sq {
-  @extend %flex;
-  @extend %img-desktop;
-  @extend %img-mobile;
+  border-radius: 8px;
+  border: 1px solid #E6E6E6;
 }
 
 video {
