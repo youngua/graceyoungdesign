@@ -47,15 +47,16 @@ body {
 }
 
 .flex-left {
-    width: 15%;
+    width: 30%;
 
     p {
         color: #000;
         font-weight: 500;
+        padding-bottom: 0px;
     }
 
     img {
-        width: 80%;
+        width: 100px;
     }
 
     @media (max-width: $m-media) {
@@ -68,8 +69,12 @@ body {
 }
 
 .flex-right {
-    width: 80%;
+    width: 100%;
 
+    p {
+        padding-bottom: 0px;
+    }
+    
     #clown {
         font-size: 40px;
         color: #000;
