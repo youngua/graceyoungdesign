@@ -3,7 +3,7 @@
 
 /* ---------- Variables ---------- */
 $m-media: 900px;
-$purple: #DFE1FF;
+$lightBlue: #DFE1FF;
 
 %flex {
   display: flex;
@@ -34,7 +34,7 @@ $purple: #DFE1FF;
 
 body {
   // background-color: #F5F2F1;
-  margin: 8% 24% 2% 24% !important;
+    margin: 8% 24% 2% 24% !important;
 
   @media (max-width: 1024px) {
     margin: 10% 15% 2% 15% !important;
@@ -48,7 +48,7 @@ body {
 /* ---------- Navigation ---------- */
 
 .nav-container.scrolled {
-  background-color: #FFF !important;
+  background-color: #fff !important;
 }
 
 .nav-link {
@@ -73,7 +73,7 @@ mark {
   padding: 0.1em 0.5em;
   width: max-content;
   background-size: 200% auto;
-  background-image: linear-gradient(to right, #fff 50%, $purple 50%);
+  background-image: linear-gradient(to right, #fff 50%, $lightBlue 50%);
   background-position: 0% 0;
   animation-duration: 2s;
   animation-delay: 0s;
@@ -145,7 +145,7 @@ li {
 }
 
 hr {
-  border: 1px solid #DFE1FF;
+  border: 1px solid $lightBlue;
   margin: 60px 0 60px 0;
 }
 

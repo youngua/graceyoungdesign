@@ -6,16 +6,28 @@ $m-media: 900px;
 
 body {
     background-color: #F7FFF2;
+    letter-spacing: 0.32px;
+    color: #66795A;
 }
+
+/* ---------- Nav ---------- */
+
+.nav-link, .flex-right a {
+    color: #09855D;
+  }
 
 .nav-container.scrolled {
     background-color: #F7FFF2 !important;
+
+    .nav-link { 
+         color: #09855D;
+    }
 }
 
 /* ---------- about ---------- */
 
 .about {
-    margin: 10vw 15vw 0 15vw;
+    margin: 8vw 15vw 0 15vw;
 
     @media (max-width: $m-media) {
         margin: 30vw 0 0 0;
@@ -24,39 +36,38 @@ body {
 
 .header {
     font-size: 24px;
-    font-weight: 500;
-    color: #000;
-    padding-bottom: 20px;
-    padding-top: 40px;
+    color: #66795A;
+    padding-top: 60px;
 }
 
+.about-content {
+    padding-top: 20px;
+
+    p {
+        line-height: 28px;
+    }
+}
 
 /* ---------- flexbox ---------- */
 
 .flex-container {
     display: flex;
     flex-direction: row;
-
-    a {
-        color: $copy-color;
-    }
-
-    a:hover {
-        color: $link-color;
-    }
 }
 
 .flex-left {
-    width: 30%;
+    width: 9vw;
 
     p {
-        color: #000;
+        color: #66795A;
         font-weight: 500;
         padding-bottom: 0px;
     }
 
     img {
         width: 100px;
+        display: block;
+        margin: 0 auto;
     }
 
     @media (max-width: $m-media) {
@@ -70,6 +81,7 @@ body {
 
 .flex-right {
     width: 100%;
+    margin: auto;
 
     p {
         padding-bottom: 0px;
@@ -77,11 +89,13 @@ body {
     
     #clown {
         font-size: 40px;
-        color: #000;
+        color: #66795A;
     }
 
     .blurb {
-        padding-top: 10px;
+        font-size: 14px;
+        padding-top: 6px;
+        margin-left: 2px;
     }
 
     #clown,
@@ -97,13 +111,8 @@ body {
             padding-top: 8px;
         }
 
-        #clown {
-            font-size: 30px;
-        }
-
         .blurb {
             padding-top: 5px;
-            font-size: 16px;
         }
     }
 }

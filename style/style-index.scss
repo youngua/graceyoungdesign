@@ -3,18 +3,36 @@
 
 /* ---------- Variables ---------- */
 $m-media: 900px;
+$blue-copy: #5359B1;
 
 body {
-  background-color: #F4F0FF;
+  background-color: #EFF0FF;
 }
 
 /* ---------- Header ---------- */
 
+// .nav-content p {
+//   padding-top: 10px;
+// }
+
+.nav-link {
+  color: #0F1FFF;
+}
+
 .nav-container.scrolled {
+  .nav-content p {
+    padding-top: 0;
+  }
+
   #clown {
-    font-size: 20px;
+    font-size: 22px;
     position: relative;
     top: 0;
+    color: $blue-copy;
+  }
+
+  .nav-link { 
+    color: #0F1FFF;
   }
 }
 
@@ -22,7 +40,9 @@ body {
   font-size: 38px;
   position: absolute;
   top: 34px;
-  color: #000;
+  color: $blue-copy;
+  font-family: $font-family;
+  // font-weight: 500;
 
   @media (max-width: $m-media) {
     font-size: 20px;
@@ -40,8 +60,9 @@ body {
   p {
     font-size: 2.5vh;
     line-height: 28px;
-    padding-bottom: 24px;
-    font-family: "GolosText", sans-serif;
+    font-weight: 400;
+    color: $blue-copy;
+    letter-spacing: 0.32px;
   }
 
   p:last-child {
@@ -92,11 +113,17 @@ body {
   }
 }
 
+.content:hover {
+  transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
 .content {
   margin-bottom: 2%;
+  border: 1px solid #CACDFF;
   border-radius: 8px;
   display: flex;
   background-color: #DFE1FF;
+  transition: transform .2s; /* Animation */
 
   img {
     width: 100%;
@@ -105,35 +132,59 @@ body {
   }
 
   .content-copy {
-    margin: auto;
     width: 100%;
-    padding: 4%;
+    padding: 2% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
     .header,
     .subtitle {
       padding-bottom: 12px;
+      letter-spacing: 0.32px;
+    }
+
+    .header,
+    .subtitle,
+    .blurb{
+      color: $blue-copy;
     }
 
     .header {
       font-size: 22px;
-      color: #000;
       line-height: 28px;
     }
 
     .subtitle {
-      color: #000;
       font-size: 14px;
+      text-transform: uppercase;
+      padding-bottom: 5%;
     }
 
     .blurb {
-      color: #555;
       font-size: 14px;
       line-height: 22px;
       padding-bottom: 24px;
     }
 
+    button {
+      display: flex;
+      align-items: flex-start;
+      background-color: #DFE1FF;
+      border: none;
+    }
+
     .csLink {
       font-size: 14px;
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #C9CCFF;
+      border: 1px solid #5359b143;
+      border-radius: 100px;
+    }
+
+    @media (max-width: $m-media) {
+      padding-top: 6%;
     }
   }
 
@@ -148,4 +199,8 @@ body {
       border-radius: 8px 8px 0px 0px;
     }
   }
+}
+
+.footer p {
+  color: $blue-copy;
 }

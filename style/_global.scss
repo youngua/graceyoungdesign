@@ -1,8 +1,8 @@
 /* ---------- Variables ---------- */
-$font-family: "GolosText", sans-serif;
+$font-family: "Golos Text", serif;
 
 $copy-color: #555;
-$link-color: #6800EC;
+$link-color: #0F1FFF;
 
 %flex {
   display: flex;
@@ -47,52 +47,66 @@ p {
 
 a {
   text-decoration: none;
-  color: $link-color;
+  color: #0F1FFF;
+  letter-spacing: 0.32px;
 }
 
 a:hover {
-  color: #6800EC;
+  color: #E55733;
 }
 
 .nav-link {
+  font-size: 18px;
   color: #000;
-  font-size: 20px;
+}
+
+.nav-container.scrolled {
+  .nav-link:hover {
+    color: #E55733;
+  }
 }
 
 /* ---------- Typography ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text&display=swap');
 @font-face {
-  font-family: "GolosText", sans-serif;
+  font-family: "Golos Text", serif;
   src: url("../fonts/GolosText-Regular.ttf") format("truetype");
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&display=swap');
 @font-face {
-  font-family: "GolosText", sans-serif;
+  font-family: "Golos Text", serif;
   src: url("../fonts/GolosText-Medium.ttf") format("truetype");
-  font-weight: 600;
-  font-style: medium;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
-@font-face {
-  font-family: "GolosText", sans-serif;
-  src: url("../fonts/GolosText-SemiBold.ttf") format("truetype");
-  font-weight: 700;
-  font-style: semi-bold;
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital@1&display=swap');
+.serif-italic {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,500&display=swap');
+.serif-medium-italic {
+  font-family: "IBM Plex Serif", serif;
+  font-weight: 500;
+  font-style: italic;
+  color: #3E5033;
 }
 
 /* ---------- Components ---------- */
 
 .nav-container.scrolled {
-  background-color: #F4F0FF !important;
+  background-color: #EFF0FF !important;
   padding-top: 20px !important;
   padding-bottom: 20px !important;
   transition: background-color 200ms linear;
-
-  .nav-link,
-  #clown {
-    color: #000;
-  }
 
   @media (max-width: $m-media) {
     top: 0;
@@ -110,6 +124,8 @@ a:hover {
   @extend %flex;
 
   #clown {
+    letter-spacing: 0.32px;
+    
     @media (min-width: $m-media) {
       font-size: 22px;
     }
