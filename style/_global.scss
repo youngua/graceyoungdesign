@@ -1,16 +1,15 @@
 /* ---------- Variables ---------- */
 $font-family: "Golos Text", serif;
-
-$copy-color: #555;
-$link-color: #0F1FFF;
+$m-media: 900px;
+$grass: #09855D;
+$plant: #68B699;
+$meadow: #F7FFF2;
 
 %flex {
   display: flex;
   justify-content: space-between;
   padding-bottom: 0;
 }
-
-$m-media: 900px;
 
 /* ---------- Global ---------- */
 * {
@@ -24,8 +23,9 @@ $m-media: 900px;
 }
 
 body {
-  color: $copy-color;
-  margin: 2% 15% 2% 15%;
+  color: $grass;
+  margin: 2% 10% 2% 10%;
+  background-color: #F7FFF2;
 
   @media (max-width: $m-media) {
     margin: 24px;
@@ -47,22 +47,22 @@ p {
 
 a {
   text-decoration: none;
-  color: #0F1FFF;
+  color: #09855D;
   letter-spacing: 0.32px;
 }
 
 a:hover {
-  color: #E55733;
+  color: #4B56FB;
 }
 
 .nav-link {
   font-size: 18px;
-  color: #000;
+  color: #09855D;
 }
 
 .nav-container.scrolled {
   .nav-link:hover {
-    color: #E55733;
+    color: #4B56FB;
   }
 }
 
@@ -85,25 +85,19 @@ a:hover {
   font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital@1&display=swap');
-.serif-italic {
-  font-family: "IBM Plex Serif", serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@1,500&display=swap');
-.serif-medium-italic {
-  font-family: "IBM Plex Serif", serif;
-  font-weight: 500;
-  font-style: italic;
-  color: #3E5033;
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@600&display=swap');
+@font-face {
+  font-family: "Golos Text", serif;
+  src: url("../fonts/GolosText-SemiBold.ttf") format("truetype");
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 /* ---------- Components ---------- */
 
 .nav-container.scrolled {
-  background-color: #EFF0FF !important;
+  background-color: #F7FFF2 !important;
   padding-top: 20px !important;
   padding-bottom: 20px !important;
   transition: background-color 200ms linear;
@@ -123,14 +117,6 @@ a:hover {
   padding: 2% 15% 2% 15%;
   @extend %flex;
 
-  #clown {
-    letter-spacing: 0.32px;
-    
-    @media (min-width: $m-media) {
-      font-size: 22px;
-    }
-  }
-
   .nav-content p {
     float: left;
     padding-left: 40px;
@@ -146,7 +132,7 @@ a:hover {
   }
 
   @media (max-width: $m-media) {
-    top: 20px;
+    top: 0;
     padding: 24px;
 
     p {
@@ -155,11 +141,17 @@ a:hover {
   }
 }
 
+hr {
+  border-top: 1px solid $plant;
+  margin-bottom: 20px;
+}
+
 .footer {
   padding-top: 100px;
 
   p {
     padding-bottom: 0;
+    font-size: 18px;
   }
 
   @extend %flex;

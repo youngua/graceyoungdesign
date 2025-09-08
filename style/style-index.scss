@@ -1,67 +1,36 @@
 /* ---------- Imports ---------- */
 @import "global";
 
-/* ---------- Variables ---------- */
-$m-media: 900px;
-$blue-copy: #5359B1;
-
 body {
-  background-color: #EFF0FF;
+  margin-right: 15%;
+  margin-left: 15%;
+
+  @media (max-width: $m-media) {
+    margin-right: 0;
+    margin-left: 0;
+    padding: 2% 4%;
+  }
+}
+
+/* ---------- Nav ---------- */
+
+#clown {
+  color: $grass;
 }
 
 /* ---------- Header ---------- */
 
-// .nav-content p {
-//   padding-top: 10px;
-// }
-
-.nav-link {
-  color: #0F1FFF;
-}
-
-.nav-container.scrolled {
-  .nav-content p {
-    padding-top: 0;
-  }
-
-  #clown {
-    font-size: 22px;
-    position: relative;
-    top: 0;
-    color: $blue-copy;
-  }
-
-  .nav-link { 
-    color: #0F1FFF;
-  }
-}
-
-.nav-container #clown {
-  font-size: 38px;
-  position: absolute;
-  top: 34px;
-  color: $blue-copy;
-  font-family: $font-family;
-  // font-weight: 500;
-
-  @media (max-width: $m-media) {
-    font-size: 20px;
-    position: relative;
-    top: 0;
-  }
-}
-
 .about {
   position: relative;
-  padding-top: 60px;
-  padding-bottom: 50px;
-  width: 50%;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  width: 60%;
 
   p {
-    font-size: 2.5vh;
-    line-height: 28px;
+    font-size: 1.3em !important;
+    line-height: 1.4em;
     font-weight: 400;
-    color: $blue-copy;
+    color: $grass;
     letter-spacing: 0.32px;
   }
 
@@ -89,7 +58,7 @@ body {
     p,
     p:last-child {
       font-size: 16px;
-      line-height: 24px;
+      // line-height: 24px;
       padding-bottom: 24px;
     }
   }
@@ -113,17 +82,14 @@ body {
   }
 }
 
-.content:hover {
-  transform: scale(1.02); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
-
 .content {
-  margin-bottom: 2%;
-  border: 1px solid #CACDFF;
+  margin-bottom: 4%;
   border-radius: 8px;
   display: flex;
-  background-color: #DFE1FF;
-  transition: transform .2s; /* Animation */
+
+  a:hover {
+  color: $grass;
+  }
 
   img {
     width: 100%;
@@ -144,47 +110,47 @@ body {
       letter-spacing: 0.32px;
     }
 
-    .header,
-    .subtitle,
-    .blurb{
-      color: $blue-copy;
-    }
-
     .header {
       font-size: 22px;
       line-height: 28px;
     }
 
     .subtitle {
+      color: $plant;
       font-size: 14px;
       text-transform: uppercase;
       padding-bottom: 5%;
+      font-weight: 600;
     }
 
     .blurb {
-      font-size: 14px;
-      line-height: 22px;
+      font-size: 16px;
+      line-height: 24px;
       padding-bottom: 24px;
-    }
-
-    button {
-      display: flex;
-      align-items: flex-start;
-      background-color: #DFE1FF;
-      border: none;
     }
 
     .csLink {
       font-size: 14px;
-      display: inline-block;
+      display: flex;
       padding: 8px 16px;
-      background-color: #C9CCFF;
-      border: 1px solid #5359b143;
-      border-radius: 100px;
+      border: 1px solid $grass;
+      border-radius: 100px; 
+      background-color: $meadow;
+      align-self: flex-start;
     }
 
+    .csLink:hover {
+        transition-duration: 0.2s;
+        background-color: #DFE1FF;
+        border: 1px solid #4B56FB;
+
+        a {
+          color: #4B56FB !important;
+        }
+      }
+
     @media (max-width: $m-media) {
-      padding-top: 6%;
+      padding: 6% 0 0 0;
     }
   }
 
@@ -199,8 +165,4 @@ body {
       border-radius: 8px 8px 0px 0px;
     }
   }
-}
-
-.footer p {
-  color: $blue-copy;
 }

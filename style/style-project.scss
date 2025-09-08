@@ -2,14 +2,7 @@
 @import "global";
 
 /* ---------- Variables ---------- */
-$m-media: 900px;
 $lightBlue: #DFE1FF;
-
-%flex {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 16px;
-}
 
 %img-desktop {
   img {
@@ -33,8 +26,8 @@ $lightBlue: #DFE1FF;
 /* ---------- Body ---------- */
 
 body {
-  // background-color: #F5F2F1;
-    margin: 8% 24% 2% 24% !important;
+  // margin: 8% 24% 2% 24% !important;
+  margin-top: 8%;
 
   @media (max-width: 1024px) {
     margin: 10% 15% 2% 15% !important;
@@ -43,18 +36,6 @@ body {
   @media (max-width: $m-media) {
     margin: 24% 24px 8% 24px !important;
   }
-}
-
-/* ---------- Navigation ---------- */
-
-.nav-container.scrolled {
-  background-color: #fff !important;
-}
-
-.nav-link {
-  @media (max-width: $m-media) {
-    font-size: 17px;
-   }
 }
 
 /* ---------- Markup ---------- */
@@ -80,6 +61,7 @@ mark {
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
   border-radius: 4px;
+  color: #4B56FB;
 }
 
 mark.active {
@@ -100,8 +82,7 @@ mark.active {
 
 h1 {
   font-size: 40px;
-  font-weight: 400;
-  color: #000;
+  font-weight: 500;
 
   @media (max-width: $m-media) {
     font-size: 40px;
@@ -109,14 +90,12 @@ h1 {
 }
 
 h2 {
-  color: #000;
   font-size: 34px;
   font-weight: 500;
-  padding-bottom: 14px;
+  padding-bottom: 40px;
 }
 
 h3 {
-  color: #000;
   font-size: 24px;
   line-height: 30px;
   font-weight: 500;
@@ -124,7 +103,6 @@ h3 {
 }
 
 h4 {
-  color: #000;
   font-size: 20px;
   line-height: 24px;
   font-weight: 500;
@@ -145,18 +123,30 @@ li {
 }
 
 hr {
-  border: 1px solid $lightBlue;
-  margin: 60px 0 60px 0;
+  border: 1px solid $plant;
+  margin: 60px 18% 60px 18%;
+
+   @media (max-width: $m-media) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+}
+
+.hr-no-padding {
+  margin-top: 80px;
+  margin-bottom: -40px;
 }
 
 .bold {
-  color: #000;
   font-weight: 600;
 }
 
 /* ---------- Project ---------- */
 
 .overview-container {
+  margin-left: 18%;
+  margin-right: 18%;
 
   .overview-row {
     display: flex;
@@ -179,20 +169,27 @@ hr {
       margin-top: -12px;
     }
   }
+
+   @media (max-width: $m-media) {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .content-container {
   padding: 40px 0 40px 0;
+  margin-left: 18%;
+  margin-right: 18%;
+
+  @media (max-width: $m-media) {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .project-content {
   @extend %flex;
   padding-top: 30px;
-  padding-bottom: 60px;
-
-  .content p {
-    font-family: "GolosText", sans-serif;
-  }
 
   .content:nth-child(1) {
     width: 100%;
@@ -228,13 +225,22 @@ video {
 
 /* ---------- Next Project ---------- */
 
+.otherproj-hr {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.otherproj-hr-inside {
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 3%;
+}
+
 .next-project {
   display: flex;
-  justify-content: center;
-  padding-top: 100px;
 
-  #right-hand {
-    padding-left: 12px;
+  div {
+   width: 100%;
   }
 
   @media (max-width: $m-media) {
@@ -243,9 +249,51 @@ video {
     p {
       padding-bottom: 8px;
     }
-
-    #right-hand {
-      padding-left: 0;
-    }
   }
 }
+
+.content-copy {
+    width: 100%;
+   
+    .header {
+      padding-bottom: 4%;
+      letter-spacing: 0.32px;
+    }
+
+    .header {
+      font-size: 22px;
+      line-height: 28px;
+    }
+
+    .subtitle {
+      color: $plant;
+      font-size: 14px;
+      text-transform: uppercase;
+      padding-bottom: 4%;
+      font-weight: 600;
+    }
+
+    .csLink {
+      font-size: 14px;
+      display: flex;
+      padding: 8px 16px;
+      border: 1px solid $grass;
+      border-radius: 100px; 
+      background-color: $meadow;
+      align-self: flex-start;
+    }
+
+    .csLink:hover {
+        transition-duration: 0.2s;
+        background-color: #DFE1FF;
+        border: 1px solid #4B56FB;
+
+        a {
+          color: #4B56FB !important;
+        }
+      }
+
+    @media (max-width: $m-media) {
+      padding: 6% 0 0 0;
+    }
+  }

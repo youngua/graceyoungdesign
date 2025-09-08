@@ -7,59 +7,38 @@ $m-media: 900px;
 body {
     background-color: #F7FFF2;
     letter-spacing: 0.32px;
-    color: #66795A;
-}
-
-/* ---------- Nav ---------- */
-
-.nav-link, .flex-right a {
-    color: #09855D;
-  }
-
-.nav-container.scrolled {
-    background-color: #F7FFF2 !important;
-
-    .nav-link { 
-         color: #09855D;
-    }
 }
 
 /* ---------- about ---------- */
 
 .about {
-    margin: 8vw 15vw 0 15vw;
+    margin-top: 120px;
+    margin-bottom: 100px;
+    display: flex;
+    gap: 40px;
 
     @media (max-width: $m-media) {
-        margin: 30vw 0 0 0;
+        margin-top: 100px;
+        display: block;
     }
 }
 
-.header {
-    font-size: 24px;
-    color: #66795A;
-    padding-top: 60px;
-}
+/* ---------- Top ---------- */
 
-.about-content {
-    padding-top: 20px;
-
-    p {
-        line-height: 28px;
-    }
-}
-
-/* ---------- flexbox ---------- */
-
-.flex-container {
+.aboutone-content {
     display: flex;
-    flex-direction: row;
+    // flex-direction: row;
+ 
+    @media (max-width: $m-media) {
+       display: block;
+    }
 }
 
 .flex-left {
     width: 9vw;
+    padding-right: 16px;
 
     p {
-        color: #66795A;
         font-weight: 500;
         padding-bottom: 0px;
     }
@@ -72,47 +51,91 @@ body {
 
     @media (max-width: $m-media) {
         width: 30%;
-
+        
         img {
-            width: 100%;
+            width: 60%;
+            margin-left: 0;
         }
     }
 }
 
 .flex-right {
-    width: 100%;
-    margin: auto;
 
     p {
         padding-bottom: 0px;
     }
     
-    #clown {
-        font-size: 40px;
-        color: #66795A;
+    .clown p {
+        font-size: 22px;
+        line-height: 32px;
     }
 
-    .blurb {
-        font-size: 14px;
-        padding-top: 6px;
-        margin-left: 2px;
-    }
-
-    #clown,
-    .blurb {
+    .clown {
         padding-left: 20px;
     }
 
     @media (max-width: $m-media) {
-        width: 90%;
+        width: 100%;
 
-        #clown,
-        .blurb {
-            padding-top: 8px;
+        .clown {
+            padding: 12px 0 40px 0;
+        }
+    }
+}
+
+.abouttwo-content {
+    width: 150%;
+
+     @media (max-width: $m-media) {
+        width: 100%;
+
+        p {
+            padding-bottom: 0;
+        }
+     }
+}
+
+/* ---------- Bottom ---------- */
+
+.about-bottom {
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    justify-content: space-between;
+
+    .experience, .education {
+        width: 35%;
+    }
+
+
+    .header {
+    font-size: 20px;
+    padding-bottom: 20px;
+    }
+
+    .header, .semibold {
+        font-weight: 600;
+    }
+
+    .plant {
+        color: $plant;
+    }
+
+    @media (max-width: $m-media) {
+        margin-top: 0;
+        display: block;
+
+        .experience, .education {
+            width: 100%;
         }
 
-        .blurb {
-            padding-top: 5px;
+        .header {
+            padding-top: 40px;
         }
+
+        p {
+            padding-bottom: 6px;
+        }
+        
     }
 }
